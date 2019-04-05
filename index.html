@@ -9,37 +9,98 @@
 </head>
 <body>
   <header>
-    <div id="header-logo">
-
-    </div>
-    <div id="header-menu" >
-      <div class="container clearfix" id="header-menu-wrap">
-        <div class="menu float">ABOUT</div>
-        <div class="menu float">VALUE</div>
-        <div class="menu float">CAREER</div>
-        <div class="menu float">CONTACT</div>
+    <div id='header-container' class='container clearfix'>
+      <div id="header-logo">
+        <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/001_title_logow_tripbtoz.png" >
       </div>
-    </div>
+      <div id="header-menu" >
+        <div class="container clearfix" id="header-menu-wrap">
+          <div class="menu float" data-target="vision">ABOUT</div>
+          <div class="menu float" data-target="value">VALUE</div>
+          <div class="menu float" data-target='career'>CAREER</div>
+          <div class="menu float" data-target="contact">CONTACT</div>
+        </div>
+      </div>
   </header>
   <main>
     <div class='section' id="ambition" >
-      <div id="ambition-title" class="eng-title">A great ambition</div>
-      <div class="content" id="ambition-content">
-          새로운 여행, 당신과 함께<br>
-          가슴 벅찬 하루를 항해하고 싶습니다.
+      <div id="ambition-title" >
+        <div class="eng-title title">A great ambition</div>
+        <div class="content">
+            새로운 여행, 당신과 함께<br>
+            가슴 벅찬 하루를 항해하고 싶습니다.
+        </div>
+        
       </div>
     </div>
     <div class="section" id="hotel-service">
-      <div id="hotel-service-title">
+      <div class="title no-pc">
           이제 새로운 호텔예약<br>
           서비스를 사용해 보세요!
       </div>
-      <div class="content" id='hotel-service-content'>
-          트립어드바이저와 제휴를 통한 글로벌 리뷰서비스와 제휴로<br>
+      <div class="title no-mobile no-tablet">
+        이제 새로운 호텔예약
+        서비스를 사용해 보세요!
+    </div>
+      <div class="content no-mobile no-tablet" id='hotel-service-content' style="color:black;">
+          트립어드바이저와 제휴를 통한 글로벌 리뷰서비스와 제휴로
           검증된 콘텐츠를 제공합니다!
       </div>
-      <div class="picture" id="hotel-service-picture">
-
+      <div class="content no-pc" id='hotel-service-content' style="color:black;">
+        트립어드바이저와 제휴를 통한 글로벌 리뷰서비스와 제휴로<br>
+        검증된 콘텐츠를 제공합니다!
+      </div>
+      <div id="hotel-service-picture" class="clearfix" style="">
+        
+        <div class="picture-wrap" >
+          <div class="picture-title">
+            전세계 80만개 이상의<br>
+            호텔/액티비티 예약
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_02.png" style="width:100%;">
+          </div>
+          <div class="mobile-box-shadow">
+ 
+          </div>
+        </div>
+        <div class="picture-wrap"  >
+          <div class="picture-title">
+            여행을 하며 찍은 영상을<br>
+            공유하며 리워드 받기
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_03.png" style="width:100%;">
+          </div>
+          <div class="mobile-box-shadow">
+ 
+          </div>
+        </div>
+        
+        <div class="picture-wrap" >
+          <div class="picture-title">
+            15초동안 보여줄 수 있는<br>
+            나만의 흥미로운 여행 영상
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_04.png" style="width:100%;">
+          </div>
+          <div class="mobile-box-shadow">
+ 
+          </div>
+        </div>
+        <div class="picture-wrap">
+          <div class="picture-title">
+            세상에서 가장 신나는<br>
+            여행을 만나기
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_05.png" style="width:100%;">
+          </div>
+          <div class="mobile-box-shadow">
+ 
+          </div>
+        </div>
       </div>
     </div>
     <div class="section" id="vision">
@@ -54,57 +115,59 @@
           자유로운 방식으로 실행합니다.
       </div>
       <div class="button-section">
-        <div class="button">
+        <div class="button" data-modal-target="modal-vision">
             VIEW FOUNDER’S MESSAGE
         </div>
       </div>
     </div>
-    <div class="section" id="definition">
-      <div class='section-head'>
-        - VALUE -
-      </div>
-      <div id='vision-title' class="eng-title">
-          A new definition
-      </div>
-      <div class="content">
-          이제 여행은<br>
-          돈이 아닌 용기의 문제입니다.
-      </div>
-      <div class="button-section">
-        <div class="button">
-            VIEW VALUE
+    <div class="clearfix">
+      <div class="section" id="definition">
+        <div class='section-head'>
+          - VALUE -
+        </div>
+        <div id='vision-title' class="eng-title">
+            A new definition
+        </div>
+        <div class="content">
+            이제 여행은<br>
+            돈이 아닌 용기의 문제입니다.
+        </div>
+        <div class="button-section">
+          <div class="button"  data-modal-target="modal-value">
+              VIEW VALUE
+          </div>
         </div>
       </div>
-    </div>
-    <div class="section" id="value">
-      <div class='container'>
-        <div id="value-title">
-          VALUE
-        </div>
-        <div id="value-content">
-          <div id="value-content-header">
-              새로운 여행에 대한 세 가지 가치를 제안합니다. 
+      <div class="section" id="value">
+        <div class='container'>
+          <div id="value-title">
+            VALUE
           </div>
-          <div class="value-section-title" style="color:#008cdd">
-              SUSTAINABILITY
-          </div>
-          <div class="value-section-content">
-              데이터와 기술을 통해 우리와 우리 미래 세대가 더 많이, 
-              더 멀리, 그리고 더 오랫동안 여행할 수 있도록 한다.
-          </div>
-          <div class="value-section-title" style="color:#ff6600">
-            IDENTITY
-          </div>
-          <div class="value-section-content">
-              여행을 통해 여행자 개개인들의 아이덴티티를 찾는 것을
-              돕는다
-          </div>
-          <div class="value-section-title" style="color:#8200b2">
-              COMMUNITY
-          </div>
-          <div class="value-section-content">
-              전세계인들이 본인의 여행경험을 공유하고, 리워드를
-              통해 또 다른 여행을 실현할 수 있도록 한다.
+          <div id="value-content">
+            <div id="value-content-header">
+                새로운 여행에 대한 세 가지 가치를 제안합니다. 
+            </div>
+            <div class="value-section-title" style="color:#008cdd">
+                SUSTAINABILITY
+            </div>
+            <div class="value-section-content">
+                데이터와 기술을 통해 우리와 우리 미래 세대가 더 많이, 
+                더 멀리, 그리고 더 오랫동안 여행할 수 있도록 한다.
+            </div>
+            <div class="value-section-title" style="color:#ff6600">
+              IDENTITY
+            </div>
+            <div class="value-section-content">
+                여행을 통해 여행자 개개인들의 아이덴티티를 찾는 것을
+                돕는다
+            </div>
+            <div class="value-section-title" style="color:#8200b2">
+                COMMUNITY
+            </div>
+            <div class="value-section-content">
+                전세계인들이 본인의 여행경험을 공유하고, 리워드를
+                통해 또 다른 여행을 실현할 수 있도록 한다.
+            </div>
           </div>
         </div>
       </div>
@@ -122,7 +185,7 @@
           B부터 Z까지 우리가 함께합니다.
         </div>
         <div class="button-section">
-          <div class="button">
+          <div class="button"  data-modal-target="modal-career">
               VIEW CAREER
           </div>
         </div>
@@ -138,7 +201,7 @@
             지금 합류하세요.
         </div>
         <div class="button-section">
-          <div class="button">
+          <div class="button"  data-modal-target="modal-career">
               VIEW CAREER
           </div>
         </div>
@@ -167,9 +230,10 @@
         </div>
       </div>
     </div>
+    
   </main>
   <footer>
-    <div class="container" id='footer'>
+    <div class="container  no-tablet no-pc" id='footer-mobile'>
       <span style="font-family: NanumSquareOTFB;">주식회사 트립비토즈</span>
       <br>대표이사 : 정지하   소재지 : (04020) 서울시 마포구 포은로 9/4층  
       <br>이메일 : cs@tripbtoz.com
@@ -179,6 +243,63 @@
       <br>통신판매업신고번호 : 제2017-서울마포-1760호
       <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
     </div>
+    <div class="container no-mobile" id="footer-tab-pc">
+        <span style="font-family: NanumSquareOTFB;">주식회사 트립비토즈</span>
+        <br>대표이사 : 정지하   소재지 : (04020) 서울시 마포구 포은로 9/4층 이메일 : cs@tripbtoz.com
+        <br>연락처 : 02-711-6880   개인정보관리책임자 : 정우열 사업자등록번호 : 778-86-00179 관광사업자등록번호 : 제2015-000018호
+        <br>통신판매업신고번호 : 제2017-서울마포-1760호
+        <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
+    </div>
   </footer>
+  <div id='modal'>
+      <div id="modal-content-wrap">
+        <div id="modal-content">
+          <div id="modal-vision" class="clearfix">
+            <div id='modal-vision-img'>
+
+            </div>
+            <div id="modal-vision-content">
+              <br><span class="modal-content-title">새로운 여행의 시작</span>
+              <br>
+              <span class="modal-content-bold">
+              <br>트립비토즈의 창업자 정지하 입니다.
+              <br>무엇이 나의 가슴을 뛰게 할까? 우리를 설레게 하는 것은 무엇일까?
+              <br>이 두 질문을 끊임없이 되뇌이며 오늘까지 왔습니다.
+              </span>
+              <br>
+
+              <br>저의 첫 직장은 규율이 엄한 조직이였고 하향식 문화로 소통이 어려웠지만 빠른 속도로 한 곳을 향해 돌진하는 추진력을 갖춘 곳 이였습니다.
+              <br>두번째 직장은 자유롭고 창의적인 사람들이 모인 곳 이였습니다. 하지만 목표가 명확하지 않아 한 방향으로 나아가는 속도가 더디었습니다.
+              <br>이 두 조직의 강점을 잘 살린 우리만의 기업 문화를 어떻게 시작할 수 있을지 고민했습니다. 그리고 다양한 사람들과 이야기하며 새로운 조직을 갈망하는 사람이 저 하나만이 아니라는것을 깨달았습니다.
+              <br>
+              <br>새로운 기업문화를 제시하는 회사의 꿈을 품은지 10년여만에 우리는 트립비토즈를 시작했습니다.
+              <br>
+              <br>전세계인 75억명이 여행을 떠나고 여행을 통해 새로운 나를 발견할 수 있도록 돕는 기업, 우린 새로운 여행 시장을 개척하고 있습니다.
+              <br>오늘까지의 여행은 내가 무엇을 할지, 어디로 떠날지, 얼마의 예산이 필요한지 모두 고민한 이후만 있었습니다.
+              <br>앞으로의 트립비토즈는 여행자들이 여행을 꿈꾸는 시간을 늘리는데 집중하겠습니다. 차세대 여행 플랫폼 트립비토즈에서 여헹자들은 실시간으로 서로의 여행을 영상으로 공유할 수 있습니다. 동시에 컨텐츠를 만든 여행자들은 여행 리워드를 받아 현금 없이 여행할 수 있는 세상을 만들겠습니다.
+              <br>
+              <br>'여행을 통해 여행자 개개인들의 아이덴티티를 찾는것을 돕는다' 미션이 무엇보다 우선인 곳
+              <br>전세계인들이 본인의 여행을 서로 공유하고 이에 대한 적절한 리워드를 여행자들과 나누는 곳
+              <br>그리고, 책임감있고 자유로운 영혼을 가진 인재들이 특별한 공간에 모여 서로 소통하는 곳
+              <br>
+              <br>우리가 만들 트립비토즈의 세상은 이 곳이 무대의 전부가 아닙니다. 세상 전부가 무대이며 영상을 통해 전세계인들과 함께 여행을 꿈꾸겠습니다.
+              <br>한 사람이라도 더 많은 사람들이 스트레스 없이 여행을 떠날 수 있도록, 당신과 함께 가슴 벅찬 하루를 항해하고 싶습니다.
+              <br>위대한 여행 기업으로의 시작 트립비토즈와 함께 하실 분은 당신입니다!
+            </div>
+          </div>
+          <div id='modal-value'>
+
+          </div>
+        </div>
+        <div id="modal-close-btn-wrap">
+          <div id="modal-close-btn">x</div>
+        </div>
+      </div>
+    </div>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="./index.js" ></script>
 </body>
 </html>
