@@ -54,13 +54,16 @@ $(window).on('scroll', function () {
   var valueTop = $("#value").offset().top
   var careerTop = $("#career").offset().top
   var joinTop = $("#join").offset().top
+  var contactTop = $("#contact").offset().top
+
   var ambitionBottom = $("#ambition").offset().top + $('#ambition').height()
-  var hotelServiceBottom = $("#hotel-service").offset().top + $('#ambition').height()
-  var visionBottom = $("#vision").offset().top + $('#ambition').height()
-  var definitionBottom = $("#definition").offset().top + $('#ambition').height()
-  var valueBottom = $("#value").offset().top + $('#ambition').height()
-  var careerBottom = $("#career").offset().top + $('#ambition').height()
-  var joinBottom = $("#join").offset().top + $('#ambition').height()
+  var hotelServiceBottom = $("#hotel-service").offset().top + $("#hotel-service").height()
+  var visionBottom = $("#vision").offset().top + $("#vision").height()
+  var definitionBottom = $("#definition").offset().top + $("#definition").height()
+  var valueBottom = $("#value").offset().top + $("#value").height()
+  var careerBottom = $("#career").offset().top + $("#career").height()
+  var joinBottom = $("#join").offset().top + $("#join").height()
+  var contactBottom = $("#contact").offset().top + $('#contact').height()
   
   
   if (ambitionTop - threshold < windowScrollTop && windowScrollTop < ambitionBottom + threshold){
@@ -106,4 +109,10 @@ $(window).on('scroll', function () {
     $('#join').removeClass('active')
   }
   
+  if (contactTop - threshold < windowScrollTop && windowScrollTop < contactBottom + threshold){
+    $('#contact').addClass('active')
+  } else {
+    $('#contact').removeClass('active')
+  }
+
 })
