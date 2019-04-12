@@ -74,13 +74,13 @@ header{
   right:0;
 }
 #header-logo{
-  height:40px;
+  height:70px;
   text-align:center;
   background:black;
-  padding-top:10px;
+  padding-top:5px;
 }
 #header-logo img{
-  height:21px;
+  height:55px;
   width:auto;
 }
 #header-menu{
@@ -105,7 +105,7 @@ header{
   cursor: pointer;
 }
 #ambition{
-  height:203px;
+  height:233px;
   background-color:black;
   background-image:url('./image/001_background.jpg');
   background-position: bottom;
@@ -132,7 +132,7 @@ header{
   
   text-shadow: 0 0 2px rgba(1, 2, 2, 0.4);
   font-family: NanumSquareOTFB;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.63;
   letter-spacing: normal;
   text-align: center;
@@ -140,7 +140,7 @@ header{
 }
 .content{
   font-family: NanumSquareOTFR;
-  font-size: 9.5px;
+  font-size: 12px;
   line-height: 1.42;
   text-align: center;
   color:white;
@@ -154,16 +154,16 @@ header{
   float:left;
   text-align:center;
   padding-top:35px;
-  width:50%;
+  width:100%;
 }
 .picture-title{
   display:inline-block;
   padding-top:4px;
-  padding:10px;
+  padding:15px;
   border-radius:5px;
   background-color:rgb(228,228,228);
   font-family: NanumSquareOTFB;
-  font-size: 9px;
+  font-size: 15px;
   line-height: 1.44;
   text-align: center;
   color: #383838;
@@ -200,9 +200,8 @@ header{
   padding-top:25px;
 }
 #hotel-service .title{
-  font-size:17.5px;
+  font-size:20px;
   font-family: NanumSquareOTFB;
-  font-size: 17.5px;
   text-align: center;
   color: #373737;
 }
