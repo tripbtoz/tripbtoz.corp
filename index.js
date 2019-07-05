@@ -10,6 +10,7 @@ $(window).on('scroll', onScroll)
 var scrollNow = 0
 var scrollNowId = 'ambition'
 var isScrolling = true
+var isNowTouching = false
 // function setupScroll () {
 //   $('.paging-section').each(function () {
 //     // 아이디별로 위치를 지정한다
@@ -37,6 +38,9 @@ function onScroll () {
   }
 }
 function scrollPrev () {
+  if (isNowTouching) {
+    return false
+  }
   console.log('isScrolling? : ' + isScrolling)
   if (isScrolling) {
     return false
@@ -57,6 +61,9 @@ function scrollPrev () {
   })
 }
 function scrollNext () {
+  if (isNowTouching) {
+    return false
+  }
   console.log('isScrolling? : ' + isScrolling)
   if (isScrolling) {
     return false
@@ -103,6 +110,12 @@ function setSection () {
   isScrolling = false
 }
 $(window).ready(function () {
+  $('body').on('touchstart', function () {
+    isNowTouching = true
+  })
+  $('body').on('touchend', function () {
+    isNowTouching = false
+  })
   $('#aside-opener').click(openAside)
   $('#aside').click(function (e) {
     e.preventDefault()
