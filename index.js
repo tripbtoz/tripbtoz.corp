@@ -28,10 +28,11 @@ function onScroll () {
   
   const windowScrollTop = $(window).scrollTop()
   console.log('window scroll ' + windowScrollTop)
-  if (windowScrollTop > scrollNow + 3) {
+  const THRESH_HOLD = width < 768 ? 5 : 30
+  if (windowScrollTop > scrollNow + THRESH_HOLD) {
     console.log('scroll')
     scrollNext()
-  } else if (windowScrollTop < scrollNow - 3) {
+  } else if (windowScrollTop < scrollNow - THRESH_HOLD) {
     scrollPrev()
   }
 }

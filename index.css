@@ -1144,14 +1144,13 @@ footer #footer-mobile{
     margin-right: auto;
     width: 467px;
     height: 122px;
-    background-color: #2d2c2a;
   }
   #hotel-service{
     padding-top:15%;
   }
 
   #hotel-service-picture{
-    width:850px;
+    width:960px;
   }
 
   .picture-title{
@@ -1245,11 +1244,13 @@ footer #footer-mobile{
     
   }
   #hotel-service{
+    position:relative;
+    padding-top:0;
     height:1000px;
   }
   #hotel-service .title{
     font-size: 48.5px;
-    padding-top:160px;
+    padding-top:50px;
   }
   #hotel-service .content{
     font-size: 28.5px;
@@ -1257,7 +1258,12 @@ footer #footer-mobile{
     padding-bottom:48px;
   }
   #hotel-service-picture{
-    width:1100px; 
+    width:1100px;
+    position: absolute;
+    left: 50%;
+    max-height: 500px;
+    bottom: 0;
+    margin-left: -550px;
   }
   .picture-title{
     font-size:20px;
