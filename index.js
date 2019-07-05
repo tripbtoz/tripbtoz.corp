@@ -4,9 +4,9 @@ $(window).on('resize', function () {
   width = $(window).width()
   height = $(window).height()
 })
-alert('a1')
+// alert('a2')
 
-$(window).on('scroll', onScroll)
+// $(window).on('scroll', onScroll)
 var scrollNow = 0
 var scrollNowId = 'ambition'
 var isScrolling = true
@@ -22,100 +22,185 @@ var isNowTouching = false
 // }
 
 
-function onScroll () {
-  if (isScrolling) {
-     return false
-  }
+// function onScroll () {
+//   if (isScrolling) {
+//      return false
+//   }
   
-  const windowScrollTop = $(window).scrollTop()
-  console.log('window scroll ' + windowScrollTop)
-  const THRESH_HOLD = width < 768 ? 5 : 30
-  if (windowScrollTop > scrollNow + THRESH_HOLD) {
-    console.log('scroll')
-    scrollNext()
-  } else if (windowScrollTop < scrollNow - THRESH_HOLD) {
-    scrollPrev()
-  }
-}
-function scrollPrev () {
-  if (isNowTouching) {
-    return false
-  }
-  console.log('isScrolling? : ' + isScrolling)
-  if (isScrolling) {
-    return false
-  }
-  const prev = width < 768 ?  $('#' + scrollNowId).attr('data-mobile-prev') || $('#' + scrollNowId).attr('data-prev') : $('#' + scrollNowId).attr('data-prev')
-  if (!prev) {
-    return false
-  }
-  isScrolling = true
-  const prevTop = $('#' + prev).offset().top
-  const scrollTop = prevTop
-  $('html,body').animate({
-    'scrollTop': scrollTop
-  }, 500, function () {
-    isScrolling = false
-    scrollNow = scrollTop
-    scrollNowId = prev
-  })
-}
-function scrollNext () {
-  if (isNowTouching) {
-    return false
-  }
-  console.log('isScrolling? : ' + isScrolling)
-  if (isScrolling) {
-    return false
-  }
-  const next = width < 768 ? ($('#' + scrollNowId).attr('data-mobile-next') || $('#' + scrollNowId).attr('data-next')) : $('#' + scrollNowId).attr('data-next')
-  console.log('next : ' + next)
-  if (!next) {
-    return false
-  }
+//   const windowScrollTop = $(window).scrollTop()
+//   console.log('window scroll ' + windowScrollTop)
+//   const THRESH_HOLD = width < 768 ? 5 : 5
+//   if (windowScrollTop > scrollNow + THRESH_HOLD) {
+//     console.log('scroll')
+//     scrollNext()
+//   } else if (windowScrollTop < scrollNow - THRESH_HOLD) {
+//     scrollPrev()
+//   }
+// }
+// function scrollPrev () {
+//   if (isNowTouching) {
+//     return false
+//   }
+//   console.log('isScrolling? : ' + isScrolling)
+//   if (isScrolling) {
+//     return false
+//   }
+//   const prev = width < 768 ?  $('#' + scrollNowId).attr('data-mobile-prev') || $('#' + scrollNowId).attr('data-prev') : $('#' + scrollNowId).attr('data-prev')
+//   if (!prev) {
+//     return false
+//   }
+//   isScrolling = true
+//   const prevTop = $('#' + prev).offset().top
+//   const scrollTop = prevTop
+//   $('html,body').animate({
+//     'scrollTop': scrollTop
+//   }, 500, function () {
+//     isScrolling = false
+//     scrollNow = scrollTop
+//     scrollNowId = prev
+//   })
+// }
+// function scrollNext () {
+//   if (isNowTouching) {
+//     return false
+//   }
+//   console.log('isScrolling? : ' + isScrolling)
+//   if (isScrolling) {
+//     return false
+//   }
+//   const next = width < 768 ? ($('#' + scrollNowId).attr('data-mobile-next') || $('#' + scrollNowId).attr('data-next')) : $('#' + scrollNowId).attr('data-next')
+//   console.log('next : ' + next)
+//   if (!next) {
+//     return false
+//   }
 
-  isScrolling = true
+//   isScrolling = true
   
-  const nextTop = $('#' + next).offset().top
-  const scrollTop = nextTop
-  console.log('scroll-top : ' + scrollTop)
-  $('html,body').animate({
-    'scrollTop': scrollTop
-  }, 500, function () {
-    isScrolling = false
-    scrollNow = scrollTop
-    scrollNowId = next
-  })
-}
+//   const nextTop = $('#' + next).offset().top
+//   const scrollTop = nextTop
+//   console.log('scroll-top : ' + scrollTop)
+//   $('html,body').animate({
+//     'scrollTop': scrollTop
+//   }, 500, function () {
+//     isScrolling = false
+//     scrollNow = scrollTop
+//     scrollNowId = next
+//   })
+// }
 
 
 
 
 function openAside () {
   $('body').css({overflow: 'hidden'})
-    $('aside').addClass('active')
+  $('aside').addClass('active')
 }
 function closeAside () {
   $('aside').removeClass('active')
-    $('body').css({overflow: 'auto'})
+  $('body').css({overflow: 'auto'})
 }
-function setSection () {
-  console.log(width)
-  var pagings = width < 760 ? $('.section, .mobile-section') : width < 1024 ? $('.section') : $('.section, .pc-section')
-  pagings.each(function () {
-    console.log($(this))
-    $(this).css({height: $(window).height()})
+// function setSection () {
+//   console.log(width)
+//   var pagings = width < 760 ? $('.section, .mobile-section') : width < 1024 ? $('.section') : $('.section, .pc-section')
+//   pagings.each(function () {
+//     console.log($(this))
+//     $(this).css({height: $(window).height() * 1.2})
     
-  })
-  isScrolling = false
-}
+//   })
+//   isScrolling = false
+// }
 $(window).ready(function () {
-  $('body').on('touchstart', function () {
-    isNowTouching = true
-  })
-  $('body').on('touchend', function () {
-    isNowTouching = false
-  })
+  if (width < 768) {
+    $('.mobile-section').addClass('section')
+  } else if (width < 1024) {
+    
+  } else {
+    $('.pc-section').addClass('section')
+  }
+  var myFullpage = new fullpage('#fullpage', {
+    //Navigation
+    licenseKey: '33509323-B215456D-A8C38CEC-9E69E47C',
+    // menu: '#menu',
+    // lockAnchors: false,
+    // anchors:['firstPage', 'secondPage'],
+    // navigation: false,
+    // navigationPosition: 'right',
+    // navigationTooltips: ['firstSlide', 'secondSlide'],
+    // showActiveTooltip: false,
+    // slidesNavigation: false,
+    // slidesNavPosition: 'bottom',
+  
+    // //Scrolling
+    // css3: true,
+    // scrollingSpeed: 700,
+    // autoScrolling: true,
+    // fitToSection: true,
+    // fitToSectionDelay: 1000,
+    // scrollBar: false,
+    // easing: 'easeInOutCubic',
+    // easingcss3: 'ease',
+    // loopBottom: false,
+    // loopTop: false,
+    // loopHorizontal: true,
+    // continuousVertical: false,
+    // continuousHorizontal: false,
+    // scrollHorizontally: false,
+    // interlockedSlides: false,
+    // dragAndMove: false,
+    // offsetSections: false,
+    // resetSliders: false,
+    // fadingEffect: false,
+    // normalScrollElements: '#element1, .element2',
+    // scrollOverflow: false,
+    // scrollOverflowReset: false,
+    // scrollOverflowOptions: null,
+    // touchSensitivity: 15,
+    // normalScrollElementTouchThreshold: 5,
+    // bigSectionsDestination: null,
+  
+    // //Accessibility
+    // keyboardScrolling: true,
+    // animateAnchor: true,
+    // recordHistory: true,
+  
+    // //Design
+    // controlArrows: true,
+    // verticalCentered: true,
+    // sectionsColor : ['#ccc', '#fff'],
+    // paddingTop: '3em',
+    // paddingBottom: '10px',
+    // fixedElements: '#header, .footer',
+    // responsiveWidth: 0,
+    // responsiveHeight: 0,
+    // responsiveSlides: false,
+    // parallax: false,
+    // parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+    // cards: false,
+    // cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+  
+    //Custom selectors
+    sectionSelector: '.section',
+    slideSelector: '.slide',
+  
+    // lazyLoading: true,
+  
+    // //events
+    // onLeave: function(origin, destination, direction){},
+    // afterLoad: function(origin, destination, direction){},
+    // afterRender: function(){},
+    // afterResize: function(width, height){},
+    // afterResponsive: function(isResponsive){},
+    // afterSlideLoad: function(section, origin, destination, direction){},
+    // onSlideLeave: function(section, origin, destination, direction){}
+  });
+  myFullpage.
+  // $('body').on('touchstart', function () {
+  //   isNowTouching = true
+  // })
+  // $('body').on('touchend', function () {
+  //   isNowTouching = false
+  //   onScroll()
+  // })
   $('#aside-opener').click(openAside)
   $('#aside').click(function (e) {
     e.preventDefault()
@@ -126,7 +211,7 @@ $(window).ready(function () {
   //   $(this).css({height: $(window).height()})
   //   isScrolling = false
   // })
-  setSection()
+  // setSection()
 
   $(".menu, .aside-item").click(function(){
     closeAside()
