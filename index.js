@@ -4,7 +4,7 @@ $(window).on('resize', function () {
   width = $(window).width()
   height = $(window).height()
 })
-
+alert('a1')
 
 $(window).on('scroll', onScroll)
 var scrollNow = 0
