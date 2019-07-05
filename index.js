@@ -3,11 +3,86 @@ var height = $(window).height()
 $(window).on('resize', function () {
   width = $(window).width()
   height = $(window).height()
-  $('.section').each(function () {
-    $(this).css({height: $(window).height()})
-  })
 })
-console.log(width, height)
+
+
+$(window).on('scroll', onScroll)
+var scrollNow = 0
+var scrollNowId = 'ambition'
+var isScrolling = true
+// function setupScroll () {
+//   $('.paging-section').each(function () {
+//     // 아이디별로 위치를 지정한다
+//     var id = $(this).attr('id')
+//     var height = $(this).offset().top
+//     console.log(height)
+//     sectionHeight[id] = height
+//   })
+// }
+
+
+function onScroll () {
+  if (isScrolling) {
+     return false
+  }
+  
+  const windowScrollTop = $(window).scrollTop()
+  console.log('window scroll ' + windowScrollTop)
+  if (windowScrollTop > scrollNow + 3) {
+    console.log('scroll')
+    scrollNext()
+  } else if (windowScrollTop < scrollNow - 3) {
+    scrollPrev()
+  }
+}
+function scrollPrev () {
+  console.log('isScrolling? : ' + isScrolling)
+  if (isScrolling) {
+    return false
+  }
+  const prev = $('#' + scrollNowId).attr('data-prev')
+  if (!prev) {
+    return false
+  }
+  isScrolling = true
+  const prevTop = $('#' + prev).offset().top
+  const scrollTop = prevTop
+  $('html,body').animate({
+    'scrollTop': scrollTop
+  }, 500, function () {
+    isScrolling = false
+    scrollNow = scrollTop
+    scrollNowId = prev
+  })
+}
+function scrollNext () {
+  console.log('isScrolling? : ' + isScrolling)
+  if (isScrolling) {
+    return false
+  }
+  const next = $('#' + scrollNowId).attr('data-next')
+  console.log('next : ' + next)
+  if (!next) {
+    return false
+  }
+
+  isScrolling = true
+  
+  const nextTop = $('#' + next).offset().top
+  const scrollTop = nextTop
+  console.log('scroll-top : ' + scrollTop)
+  $('html,body').animate({
+    'scrollTop': scrollTop
+  }, 500, function () {
+    isScrolling = false
+    scrollNow = scrollTop
+    scrollNowId = next
+  })
+}
+
+
+
+
 function openAside () {
   $('body').css({overflow: 'hidden'})
     $('aside').addClass('active')
@@ -17,9 +92,14 @@ function closeAside () {
     $('body').css({overflow: 'auto'})
 }
 function setSection () {
-  $('.section').each(function () {
+  console.log(width)
+  var pagings = width < 1024 ? $('.section') : $('.section, .pc-section')
+  pagings.each(function () {
+    console.log($(this))
     $(this).css({height: $(window).height()})
+    
   })
+  isScrolling = false
 }
 $(window).ready(function () {
   $('#aside-opener').click(openAside)
@@ -28,9 +108,12 @@ $(window).ready(function () {
     e.stopPropagation()
   })
   $('aside').click(closeAside)
-  $('.section').each(function () {
-    $(this).css({height: $(window).height()})
-  })
+  // $('.section').each(function () {
+  //   $(this).css({height: $(window).height()})
+  //   isScrolling = false
+  // })
+  setSection()
+
   $(".menu, .aside-item").click(function(){
     closeAside()
     var target = $(this).attr('data-target')

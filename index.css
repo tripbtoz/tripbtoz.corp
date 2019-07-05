@@ -2,14 +2,14 @@
   .no-mobile{
     display:none !important;
   }
-  @media screen and (min-width:768px) and (max-width:1200px){
+  @media screen and (min-width:768px) and (max-width:1023px){
     .no-tablet{
       display:none !important;
     }
   }
   
 }
-@media screen and (min-width:1200px){
+@media screen and (min-width:1024px){
   .no-pc{
     display:none !important;
   }
@@ -300,18 +300,23 @@ aside.active{
 #definition{
   padding-top: 33px;
   height: 400px;
-  background-image: url(./image/003_background.jpg);
   background-size: cover;
-  padding-top:90px;
-  background-image:url('./image/003_background.jpg')
+  background-image:url('./image/003_background.jpg');
+  padding-bottom:20px;
+}
+#definition .upper{
+  height: 42%
+}
+#definition .downer{
+  height:58%;
 }
 #definition .button-section{
-  padding-top:40px;
+  padding-top:30px;
 }
 
 #value{
-  padding-top:44px;
-  
+  padding-top:24px;
+  background-color:rgba(255,255,255,0.6)
 }
 #value .container{
   
@@ -323,7 +328,6 @@ aside.active{
   color: #202020;
 }
 #value-content{
-  padding-top:30px;
   padding-bottom:52px;
 }
 #value-content-header{
@@ -335,7 +339,7 @@ aside.active{
   color: #202020;
 }
 .value-section-title{
-  padding-top:30px;
+  padding-top:24px;
   font-family: NanumSquareOTFEB;
   font-size: 15px;
   font-weight: normal;
@@ -844,9 +848,6 @@ footer #footer-mobile{
 
 
 @media screen and (min-width: 768px) {
-  .no-tablet{
-    display:none;
-  }
   aside{
     left: -1000px;
   }
@@ -854,7 +855,7 @@ footer #footer-mobile{
     width:300px;
   }
   .eng-title{
-
+    
     line-height:1.2;
   }
     
@@ -893,10 +894,11 @@ footer #footer-mobile{
   .eng-title{
     font-size:48px !important;
   }
-  .content{
+  #hotel-service .content{
     padding-top:10px;
-    font-size:16px;
-    line-height:1.6
+    font-size:24px;
+    line-height:1.6;
+    font-family: NanumSquareOTFR;
   }
   .button{
     width: 240px;
@@ -921,7 +923,7 @@ footer #footer-mobile{
     width:540px;
   }
   #hotel-service .title{
-    font-size:25px; 
+    font-size:40px; 
   }
   .picture-wrap{
     width:260px;
@@ -1077,37 +1079,106 @@ footer #footer-mobile{
 }
 
 @media screen and (min-width:1024px) {
+  aside{
+    display:none;
+  }
+  header{
+    background-color: black;
+  }
   #header-container{
     width:1024px;
+    padding-top: 30px;
+  }
+  .header-menu-btn{
+    display:none;
+  }
+  #header-wrap{
+    width:30%;
+    float:left;
+  }
+  #header-menu{
+    padding-top:10px;;
+    float:left;
+    width:70%;
+    display:block;
+    text-align:right;
+  }
+  .float-right{
+    float:right;
   }
   #ambition{
     min-height:500px;
   }
   #ambition-title{
-    width:804px;
     height:205px;
+    padding-top:10px;
     margin-left:auto;
     margin-right:auto;
   }
   .eng-title{
-    font-size: 60px;
+    font-size: 89px !important;
   }
   #ambition .content{
     
     font-size: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 467px;
+    height: 122px;
+    background-color: #2d2c2a;
+  }
+  #hotel-service{
+    padding-top:15%;
   }
   #hotel-service-picture{
-    width:700px;
+    width:850px;
   }
   .picture-title{
-    
-    font-size:13px;
+    font-family: NanumSquareOTFB;
+    font-size:15px;
+    letter-spacing:-0.7px;
   }
   .picture-wrap{
-    width:50%;
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
-  
-  
+  #definition{
+    padding-top:0 !important;
+    padding-bottom:0 !important
+  }
+  #definition .upper{
+    width:50%;
+    height:100%;
+    float:left;
+    position:relative;
+  }
+  #definition #vision-title{
+    font-size: 50px !important;
+  }
+  #definition .content{
+    padding-top: 70px;
+  }
+  #definition #value{
+    width:50%;
+    height:100%;
+    float:left;
+    position:relative;
+    background:rgba(255,255,255,1)
+  }
+  #value-title{
+    margin-left:100px;
+    text-align:left;
+  }
+  #value-content{
+    margin-left:100px;
+    width:400px;
+    margin-right:auto;
+    
+  }
+  #value-content * {
+    text-align:left;
+  }
   #footer-tab-pc{
     width:1024px;
   }
@@ -1147,7 +1218,7 @@ footer #footer-mobile{
     font-size: 26.5px;
   }
   #ambition-title{
-    padding-top: 150px;
+    /* padding-top: 150px; */
   }
   #ambition .title{
     
@@ -1181,6 +1252,7 @@ footer #footer-mobile{
   #definition{
     padding-top:160px !important
   }
+
   #definition .eng-title{
     font-size:80px;
   }

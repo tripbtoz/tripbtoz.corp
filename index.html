@@ -36,16 +36,16 @@
       </div>
       <div id="header-menu" >
         <div class="container clearfix" id="header-menu-wrap">
-          <div class="menu float" data-target="hotel-service">ABOUT</div>
-          <div class="menu float" data-target="vision">MESSAGE</div>
-          <div class="menu float" data-target="value">VALUE</div>
-          <div class="menu float" data-target='career'>CAREER</div>
-          <div class="menu float" data-target="contact">CONTACT</div>
+          <div class="menu float-right" data-target="contact">CONTACT</div>
+          <div class="menu float-right" data-target='career'>CAREER</div>
+          <div class="menu float-right" data-target="value">VALUE</div>
+          <div class="menu float-right" data-target="vision">MESSAGE</div>
+          <div class="menu float-right" data-target="hotel-service">ABOUT</div>
         </div>
       </div>
   </header>
   <main>
-    <div class='section active' id="ambition" >
+    <div class='section paging-section' id="ambition" data-next="hotel-service">
       <div id="ambition-title" class="section-content-position">
         <div class="eng-title title">A great ambition</div>
         <div class="content">
@@ -55,7 +55,7 @@
         
       </div>
     </div>
-    <div class="" id="hotel-service">
+    <div class="paging-section  pc-section" data-prev='ambition' data-next="vision" id="hotel-service">
       <div class="title no-pc fade-in">
           내 손 안에서 일상이
           <br>여행인 세상을 만듭니다
@@ -123,7 +123,7 @@
         </div>
       </div>
     </div>
-    <div class="section" id="vision">
+    <div class="section paging-section" data-prev='hotel-service' data-next="definition" id="vision">
       <div  class="section-content-position">
         <div class='section-head'>
           ABOUT
@@ -141,26 +141,28 @@
         </div>
       </div>
     </div>
-    <div class="clearfix">
-      <div class="" id="definition">
-        <div class='section-head'>
-          VALUE
-        </div>
-        <div id='vision-title' class="eng-title fade-in">
-            A new definition
-        </div>
-        <div class="content fade-in">
-            이제 여행은<br>
-            돈이 아닌 용기의 문제입니다.
-        </div>
-        <div class="button-section">
-          <div class="button"  data-modal-target="modal-value">
-              VIEW VALUE
+    <div class="clearfix section paging-section"  id="definition" data-next='career' data-prev='vision'>
+      <div class="upper">
+        <div class="section-content-position">
+          <div class='section-head'>
+            VALUE
+          </div>
+          <div id='vision-title' class="eng-title fade-in">
+              A new definition
+          </div>
+          <div class="content fade-in">
+              이제 여행은<br>
+              돈이 아닌 용기의 문제입니다.
+          </div>
+          <div class="button-section">
+            <div class="button"  data-modal-target="modal-value">
+                VIEW VALUE
+            </div>
           </div>
         </div>
       </div>
-      <div class="section2" id="value">
-        <div class='container'>
+      <div class="section2 " id="value">
+        <div class='container section-content-position'>
           <div id="value-title" >
             VALUE
           </div>
@@ -190,7 +192,7 @@
         </div>
       </div>
     </div>
-    <div class="section " id="career">
+    <div class="section paging-section" id="career" data-next='join' data-prev='definition'>
         <div  class="section-content-position">
           <div class='section-head fade-in'>
             CAREER
@@ -210,7 +212,7 @@
           </div>
         </div>
     </div>
-    <div class="section" id="join">
+    <div class="section paging-section" id="join" data-next='contact' data-prev='career'>
         <div class="section-content-position">
           <div id='join-title' class="eng-title fade-in">
             A stage of<br>
@@ -227,7 +229,7 @@
           </div>
         </div>
     </div>
-    <div class="section" id="contact">
+    <div class="section paging-section" id="contact" data-prev='join'>
       <div  class="section-content-position">
         <div class='section-head'>
             CONTACT
