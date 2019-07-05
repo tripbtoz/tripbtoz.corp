@@ -209,11 +209,7 @@ aside.active{
   text-align: center;
   color:white;
 }
-#hotel-service-picture{
-  width:260px;
-  margin-left:auto;
-  margin-right:auto;
-}
+
 .picture-wrap{
   float:left;
   text-align:center;
@@ -267,7 +263,7 @@ aside.active{
   padding-top:24px;
 }
 #hotel-service{
-  padding-top:64px;
+  
 }
 #hotel-service .title{
   font-family: NanumSquareOTFB;
@@ -279,6 +275,20 @@ aside.active{
   padding-top:24px;
   font-family: NanumSquareOTFB;
   font-size: 15px;
+}
+.mobile-section{
+  position: relative;
+  padding-top:64px;
+}
+#mobile-hotel-service-img{
+  position: absolute;
+  bottom:-10px;
+  right:0;
+}
+#hotel-service-picture{
+  width:260px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #vision{
@@ -302,21 +312,30 @@ aside.active{
   height: 400px;
   background-size: cover;
   background-image:url('./image/003_background.jpg');
-  padding-bottom:20px;
+  /* padding-bottom:20px; */
 }
 #definition .upper{
-  height: 42%
+  height: 42%;
+  padding-top:30px;
+  position:relative;
 }
-#definition .downer{
-  height:58%;
+#definition .upper .section-content-position{
+  margin-top:-100px;
+}
+
+#definition .upper .content{
+  padding-top:10px;
+
 }
 #definition .button-section{
-  padding-top:30px;
+  padding-top:15px;
 }
 
 #value{
+  height:58%;
   padding-top:24px;
-  background-color:rgba(255,255,255,0.6)
+  background-color:rgba(255,255,255,0.6);
+  position:relative;
 }
 #value .container{
   
@@ -328,7 +347,7 @@ aside.active{
   color: #202020;
 }
 #value-content{
-  padding-bottom:52px;
+  /* padding-bottom:52px; */
 }
 #value-content-header{
   font-family: NanumSquareOTFB;
@@ -1130,9 +1149,11 @@ footer #footer-mobile{
   #hotel-service{
     padding-top:15%;
   }
+
   #hotel-service-picture{
     width:850px;
   }
+
   .picture-title{
     font-family: NanumSquareOTFB;
     font-size:15px;

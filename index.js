@@ -40,7 +40,7 @@ function scrollPrev () {
   if (isScrolling) {
     return false
   }
-  const prev = $('#' + scrollNowId).attr('data-prev')
+  const prev = width < 768 ?  $('#' + scrollNowId).attr('data-mobile-prev') || $('#' + scrollNowId).attr('data-prev') : $('#' + scrollNowId).attr('data-prev')
   if (!prev) {
     return false
   }
@@ -60,7 +60,7 @@ function scrollNext () {
   if (isScrolling) {
     return false
   }
-  const next = $('#' + scrollNowId).attr('data-next')
+  const next = width < 768 ? ($('#' + scrollNowId).attr('data-mobile-next') || $('#' + scrollNowId).attr('data-next')) : $('#' + scrollNowId).attr('data-next')
   console.log('next : ' + next)
   if (!next) {
     return false
@@ -93,7 +93,7 @@ function closeAside () {
 }
 function setSection () {
   console.log(width)
-  var pagings = width < 1024 ? $('.section') : $('.section, .pc-section')
+  var pagings = width < 760 ? $('.section, .mobile-section') : width < 1024 ? $('.section') : $('.section, .pc-section')
   pagings.each(function () {
     console.log($(this))
     $(this).css({height: $(window).height()})
