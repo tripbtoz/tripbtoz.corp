@@ -4,14 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
   <title>Document</title>
 </head>
 <body>
+  <aside>
+    <div id="aside">
+      <div  class="aside-item" data-target="hotel-service">ABOUT</div>
+      <div  class="aside-item" data-target="vision">MESSAGE</div>
+      <div  class="aside-item" data-target="value">VALUE</div>
+      <div  class="aside-item" data-target='career'>CAREER</div>
+      <div  class="aside-item" data-target="contact">CONTACT</div>
+    </div>
+  </aside>
   <header>
     <div id='header-container' class='container clearfix'>
-      <div id="header-logo">
-        <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/001_title_logow_tripbtoz.png" >
+      <div id="header-wrap" class='clearfix'>
+        <div class="header-menu-btn" id="aside-opener">
+          <object class="sns-icon" data="./icons/mobile-btn-menu.svg" type="image/svg+xml">
+            
+          </object>
+        </div>
+        <div id="header-logo">
+          <object class="sns-icon" data="./icons/tripbtoz-logo-w.svg" type="image/svg+xml">
+            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/001_title_logow_tripbtoz.png" >
+          </object>
+        </div>
+        <div class="header-menu-btn"></div>
+
       </div>
       <div id="header-menu" >
         <div class="container clearfix" id="header-menu-wrap">
@@ -25,26 +46,26 @@
   </header>
   <main>
     <div class='section active' id="ambition" >
-      <div id="ambition-title" >
+      <div id="ambition-title" class="section-content-position">
         <div class="eng-title title">A great ambition</div>
         <div class="content">
             새로운 여행, 당신과 함께<br>
-            가슴 벅찬 하루를 항해하고 싶습니다.
+            가슴 벅찬 하루를 만들고 싶습니다.
         </div>
         
       </div>
     </div>
-    <div class="section" id="hotel-service">
+    <div class="" id="hotel-service">
       <div class="title no-pc fade-in">
-          내 손 안에서 <br>
-          일상이 여행인 세상을 만듭니다
+          내 손 안에서 일상이
+          <br>여행인 세상을 만듭니다
       </div>
       <div class="title no-mobile no-tablet fade-in">
         내 손 안에서 일상이 여행인 세상을 만듭니다
       </div>
       <div class="content no-pc fade-in" id='hotel-service-content' style="color:black;">
-        데이터와 기술을 통해 <br>더 많은 사람들이 더 많은 곳을 여행할 수 있도록 하고, <br>
-        이 경험을 생생하게 전세계인들과 공유할 수 있게 합니다
+        데이터와 기술을 통해 더 많은 사람들이 <br> 더 많은 곳을 여행할 수 있도록 하고, <br>
+        이 경험을 생생하게 전세계인들과<br> 공유할 수 있게 합니다
         
       </div>
       <div class="content no-mobile no-tablet fade-in" id='hotel-service-content' style="color:black;">
@@ -52,18 +73,7 @@
       </div>
       <div id="hotel-service-picture" class="clearfix" style="">
         
-        <div class="picture-wrap" >
-          <div class="picture-title">
-            전세계 80만개 이상의<br>
-            실시간 호텔 예약
-          </div>
-          <div class="picture" style="width:100%;">
-            <img src="./image/002_mobile_02.png" style="width:100%;">
-          </div>
-          <div class="mobile-box-shadow">
- 
-          </div>
-        </div>
+        
         <div class="picture-wrap"  >
           <div class="picture-title">
             여행을 하며 찍은 영상을<br>
@@ -79,7 +89,7 @@
         
         <div class="picture-wrap" >
           <div class="picture-title">
-            음원과 여행에 최적화된 <br>카메라 필터
+            여행에 최적화된 <br>카메라 촬영기능
           </div>
           <div class="picture" style="width:100%;">
             <img src="./image/002_mobile_04.png" style="width:100%;">
@@ -99,28 +109,42 @@
  
           </div>
         </div>
+        <div class="picture-wrap" >
+          <div class="picture-title">
+            전세계 80만개 이상의<br>
+            실시간 호텔 예약
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_02.png" style="width:100%;">
+          </div>
+          <div class="mobile-box-shadow">
+ 
+          </div>
+        </div>
       </div>
     </div>
     <div class="section" id="vision">
-      <div class='section-head'>
-        - ABOUT -
-      </div>
-      <div id='vision-title' class="eng-title fade-in">
-          A huge vision
-      </div>
-      <div class="content fade-in">
-        2025년 전세계에서 가장 많은 여행 <br> 컨텐츠를 보유한 기업으로 성장합니다
-      </div>
-      <div class="button-section">
-        <div class="button" data-modal-target="modal-vision">
-            VIEW FOUNDER’S MESSAGE
+      <div  class="section-content-position">
+        <div class='section-head'>
+          ABOUT
+        </div>
+        <div id='vision-title' class="eng-title fade-in">
+            A huge vision
+        </div>
+        <div class="content fade-in">
+          2025년 전세계에서 가장 많은 여행 <br> 컨텐츠를 보유한 기업으로 성장합니다
+        </div>
+        <div class="button-section">
+          <div class="button" data-modal-target="modal-vision">
+              VIEW FOUNDER’S MESSAGE
+          </div>
         </div>
       </div>
     </div>
     <div class="clearfix">
-      <div class="section" id="definition">
+      <div class="" id="definition">
         <div class='section-head'>
-          - VALUE -
+          VALUE
         </div>
         <div id='vision-title' class="eng-title fade-in">
             A new definition
@@ -135,92 +159,92 @@
           </div>
         </div>
       </div>
-      <div class="section" id="value">
+      <div class="section2" id="value">
         <div class='container'>
           <div id="value-title" >
             VALUE
           </div>
           <div id="value-content">
-            <div id="value-content-header">
+            <div id="value-content-header" style="display:none;">
               진정한 나를 찾기 위한 여정을 우리가 먼저 시작합니다 
             </div>
-            <div class="value-section-title" style="color:#008cdd">
+            <div class="value-section-title">
                 SUSTAINABILITY
             </div>
             <div class="value-section-content">
-              지속가능한 성장은 인간, 커뮤니티, 더 나아가 사회를 회복하는데 있습니다. 우리는 소비보다 다양한 경험을 제공하는데 더 큰 가치를 둡니다 
+              지속가능한 성장은 인간, 커뮤니티, 더 나아가 사회를 <br>회복하는데 있습니다. 우리는 소비보다 다양한 경험을<br> 제공하는데 더 큰 가치를 둡니다 
             </div>
-            <div class="value-section-title" style="color:#ff6600">
+            <div class="value-section-title">
               EXPERIENCE
             </div>
             <div class="value-section-content">
-              여행을 상상할 때, 여행을 다니는 중, 그리고 여정이 끝난 이후 까지. 고객의 경험을 완성하는데 집중합니다 
+              여행을 상상할 때, 여행을 다니는 중, <br>그리고 여정이 끝난 이후 까지.<br> 고객의 경험을 완성하는데 집중합니다 
             </div>
-            <div class="value-section-title" style="color:#8200b2">
+            <div class="value-section-title">
                 COMMUNICATION
             </div>
             <div class="value-section-content">
-              전 세계인들이 본인의 여행경험을 공유하고, 리워드를 통해 또 다른 여행을 떠날 수 있도록 합니다
+              전 세계인들이 본인의 여행경험을 공유하고,<br> 리워드를 통해 또 다른 여행을 떠날 수 있도록 합니다
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="section " id="career">
-        <div class='section-head fade-in'>
-          - CAREER -
-        </div>
-        <div id='career-title' class="eng-title fade-in">
-            A is you,<br>
-            our answer
-        </div>
-        <div class="content fade-in">
-          당신이 당신을 발견하는 여정에,<br>
-          B부터 Z까지 우리가 함께합니다.
-        </div>
-        <div class="button-section">
-          <div class="button"  data-modal-target="modal-career">
-              VIEW CAREER
+        <div  class="section-content-position">
+          <div class='section-head fade-in'>
+            CAREER
+          </div>
+          <div id='career-title' class="eng-title fade-in">
+              A is you,<br>
+              our answer
+          </div>
+          <div class="content fade-in">
+            당신이 당신을 발견하는 여정에,<br>
+            B부터 Z까지 우리가 함께합니다.
+          </div>
+          <div class="button-section">
+            <div class="button"  data-modal-target="modal-path">
+                VIEW YOUR PATH
+            </div>
           </div>
         </div>
     </div>
     <div class="section" id="join">
-        
-        <div id='join-title' class="eng-title fade-in">
-          A stage of<br>
-          your own
-        </div>
-        <div class="content fade-in">
-            트립비토즈에서는 세상 전부가 당신의 무대입니다.<br>
-            지금 합류하세요.
-        </div>
-        <div class="button-section">
-          <div class="button"  data-modal-target="modal-career">
-              VIEW CAREER
+        <div class="section-content-position">
+          <div id='join-title' class="eng-title fade-in">
+            A stage of<br>
+            your own
+          </div>
+          <div class="content fade-in">
+              트립비토즈에서는 세상 전부가<br> 당신의 무대입니다<br>
+              지금 합류하세요
+          </div>
+          <div class="button-section">
+            <div class="button"  data-modal-target="modal-career">
+                VIEW CAREER
+            </div>
           </div>
         </div>
     </div>
     <div class="section" id="contact">
-      <div class='section-head'>
-          - CONTACT -
+      <div  class="section-content-position">
+        <div class='section-head'>
+            CONTACT
+          </div>
+        <div id='contact-title' class="eng-title fade-in">
+            Aim High,<br>
+            Dream with us
         </div>
-      <div id='contact-title' class="eng-title fade-in">
-          Aim High,<br>
-          Dream with us
-      </div>
-      <div class="content fade-in">
-          서울특별시 강남구 테헤란로 415, 스파크플러스 3층
-      </div>
-      <div class='second-content-wrap'>
-        <div class="second-content">
-            <div class='clearfix'>
-              <div class='contact-key float'>TEL</div>
-              <div class='contact-value float'>02-711-6880</div>
-            </div>
-            <div class='clearfix'>
-              <div class='contact-key float'>EMAIL</div>
-              <div class='contact-value float'>CEO@tripbtoz.com</div>
-            </div>
+        <div class="content fade-in">
+            주소: 서울특별시 강남구 테헤란로 415, L7빌딩
+        </div>
+        <div class='second-content-wrap'>
+          <div class="second-content">
+                TEL : 02-711-6880<br>
+                EMAIL : recruit@tripbtoz.com
+              
+          </div>
         </div>
       </div>
     </div>
@@ -228,42 +252,59 @@
   </main>
   <footer>
     <div class="container  no-tablet no-pc" id='footer-mobile'>
-      <span style="font-family: NanumSquareOTFB;">주식회사 트립비토즈</span>
-      <br>대표이사 : 정지하   소재지 : (04020) 서울시 마포구 포은로 9/4층  
-      <br>이메일 : cs@tripbtoz.com
-      <br>연락처 : 02-711-6880   개인정보관리책임자 : 정우열
-      <br>사업자등록번호 : 778-86-00179
-      <br>관광사업자등록번호 : 제2015-000018호
-      <br>통신판매업신고번호 : 제2017-서울마포-1760호
-      <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
+      <div id="company-name">주식회사 트립비토즈</div>
+      <div id="footer-content">
+        대표이사 : 정지하 <span class='footer-item'>소재지 : (04020) 서울특별시 마포구 백범로 31길 21</span>
+        <br>서울창업허브 별관 415호
+        <span class='footer-item'>이메일 : cs@tripbtoz.com</span>
+        <br>연락처 : 02-711-6880   <span class='footer-item'>개인정보관리책임자 : 황복연</span>
+        <br>사업자등록번호 : 778-86-00179
+        <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
+        <br>통신판매업신고번호 : 제2017-서울마포-1760호
+        <br>Copyright (c) 2015. Tripbtoz.CO.,LTD All Rights Reserved.
+      </div>
     </div>
-    <div class="container no-mobile" id="footer-tab-pc">
-        <span style="font-family: NanumSquareOTFB;">주식회사 트립비토즈</span>
-        <br>대표이사 : 정지하   소재지 : (04020) 서울특별시 강남구 테헤란로 415,스파크플러스 3층 이메일 : cs@tripbtoz.com
-        <br>연락처 : 02-711-6880   개인정보관리책임자 : 정우열 사업자등록번호 : 778-86-00179 관광사업자등록번호 : 제2015-000018호
+    <div class="container no-pc no-mobile" id="footer-tab-pc">
+        <div id="company-name">주식회사 트립비토즈</div>
+        <br>대표이사 : 정지하  <span class='footer-item'>소재지 : (04020) 서울특별시 강남구 테헤란로 415,스파크플러스 </span>3층  <br>이메일 : cs@tripbtoz.com</span>
+        <span class='footer-item'>연락처 : 02-711-6880</span> <span class='footer-item'>개인정보관리책임자 : 황복연</span> <span class='footer-item'>사업자등록번호 : 778-86-00179</span> <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
         <br>통신판매업신고번호 : 제2017-서울마포-1760호
         <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
     </div>
     <ul class="container icon-list clearfix">
       <li class="icon-item">
         <a href="https://www.facebook.com/Tripbtoz/" target="_blank">
-          <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_01.png">
+          <object class="sns-icon" data="./icons/icn-facebook.svg" type="image/svg+xml">
+            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_01.png">
+          </object>
+          
         </a>
       </li>
       <li class="icon-item">
         <a href="https://www.youtube.com/channel/UCfTKMWl5UtNij27g8kTDx2w" target="_blank">
-          <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_02.png">
+          <object class="sns-icon" data="./icons/icn-youtube.svg" type="image/svg+xml">
+            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_02.png">
+          </object>
         </a>
       </li>
       <li class="icon-item">
         <a href="https://www.instagram.com/tripbtoz/" target="_blank">
-          <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_03.png">
+          <object class="sns-icon" data="./icons/icn-instagram.svg" type="image/svg+xml">
+            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_03.png">
+          </object>
         </a>
       </li>
     </ul>
   </footer>
   <div id='modal'>
+      
       <div id="modal-content-wrap">
+        <div id="modal-close-btn-wrap">
+          <div id="modal-close-btn">
+            <i class="material-icons">close</i>
+
+          </div>
+        </div>
         <div id="modal-content">
           <div id="modal-vision" class="clearfix">
           
@@ -271,39 +312,41 @@
 
             </div>
             <div id="modal-vision-content">
-              <br><span class="modal-content-title">새로운 여행의 시작</span>
-              <br>
-              <span class="modal-content-bold">
-              <br>트립비토즈의 창업자 정지하 입니다.
+              <br><div class="modal-content-title">새로운 여행의 시작</div>
+              <div class="modal-content-bold">
+              트립비토즈의 창업자 정지하 입니다.
               <br>무엇이 나의 가슴을 뛰게 할까? 우리를 설레게 하는 것은 무엇일까?
-              </span>
-              <br>
-              <br>제 첫 직장은 빠른 속도로 한 곳을 향해 돌진하는 추진력을 갖춘 곳 이였지만, 하향식 문화로 소통이 부족한 조직이었습니다.
-              <br>두번째 직장은 자유롭고 창의적인 사람들이 모인 곳이었습니다. 하지만 목표가 명확하지 않아 한 방향으로 나아가는 속도가 더디었습니다.
-              <br>이 두 조직의 강점을 살려 우리만의 기업 문화를 어떻게 시작할 수 있을지 고민했습니다. 그리고 다양한 사람들과 이야기하며 새로운 조직을 갈망하는 사람이 저 하나만이 아니라는 것을 깨달았습니다.
-              <br>
-              <br>그로부터 10년이 지난 오늘, 새로운 기업문화를 제시하는 회사의 꿈을 품고 트립비토즈를 시작했습니다.
-              <br>
-              <br>트립비토즈는 전세계인 75억명이 여행을 떠나고 여행을 통해 새로운 나를 발견할 수 있도록 돕고, 지금까지 없었던 새로운 여행 시장을 개척하고 있습니다.
-              <br>오늘까지의 여행은 내가 무엇을 할지, 어디로 떠날지, 얼마의 예산이 필요한지 모두 고민한 이후만 있었습니다.
-              <br>차세대 여행 플랫폼 트립비토즈에서는 여행자들이 실시간으로 서로의 여행을 영상으로 공유할 수 있습니다. 동시에 컨텐츠를 만든 여행자들은 여행 리워드를 받아 현금이 없어도 여행을 떠날 수 있습니다.
-              <br>
-              <br>'여행을 통해 여행자 개개인들의 아이덴티티를 찾는것을 돕는다' 미션이 무엇보다 우선인 곳
-              <br>전세계인들이 본인의 여행을 서로 공유하고 이에 대한 적절한 리워드를 여행자들과 나누는 곳
-              <br>그리고, 책임감 있고 자유로운 영혼의 인재들이 특별한 공간에 모여 서로 소통하는 곳
-              <br>
-              <br>우리가 함께 만들 트립비토즈의 세상은 현재 있는 이 곳이 무대의 전부가 아닙니다. 세상 전부가 무대이며 영상을 통해 전세계인들과 함께 여행을 계획하려 합니다.한 사람이라도 더 많은 사람들이 스트레스 없이 여행을 떠날 수 있도록, 당신과 함께 가슴 벅찬 하루를 항해하고 싶습니다.위대한 여행 기업으로의 시작 트립비토즈와 함께 하실 분은 당신입니다! 
+              </div>
+              <div class="modal-content-regular">
+                <br>제 첫 직장은 빠른 속도로 한 곳을 향해 돌진하는 추진력을 갖춘 곳이었지만,
+                <br>하향식 문화로 소통이 부족한 조직이었습니다.
+                <br>두번째 직장은 자유롭고 창의적인 사람들이 모인 곳이었습니다. 하지만 목표가 명확하지 않아 한 방향으로 나아가는 속도가 더디었습니다.
+                <br>이 두 조직의 강점을 살려 우리만의 기업 문화를 어떻게 시작할 수 있을지 고민했습니다. 그리고 다양한 사람들과 이야기하며 새로운 조직을 갈망하는 사람이 저 하나만이 아니라는 것을 깨달았습니다.
+                <br>
+                <br>그로부터 10년이 지난 오늘, 새로운 기업문화를 제시하는 회사의 꿈을 품고 트립비토즈를 시작했습니다.
+                <br>
+                <br>트립비토즈는 전세계인 75억명이 여행을 떠나고 여행을 통해 새로운 나를 발견할 수 있도록 돕고, 지금까지 없었던 새로운 여행 시장을 개척하고 있습니다.
+                <br>오늘까지의 여행은 내가 무엇을 할지, 어디로 떠날지, 얼마의 예산이 필요한지 모두 고민한 이후만 있었습니다.
+                <br>차세대 여행 플랫폼 트립비토즈에서는 여행자들이 실시간으로 서로의 여행을 영상으로 공유할 수 있습니다. 동시에 컨텐츠를 만든 여행자들은 여행 리워드를 받아 현금이 없어도 여행을 떠날 수 있습니다.
+                <br>
+                <br>'여행을 통해 여행자 개개인들의 아이덴티티를 찾는것을 돕는다' 미션이 무엇보다 우선인 곳
+                <br>전세계인들이 본인의 여행을 서로 공유하고 이에 대한 적절한 리워드를 여행자들과 나누는 곳
+                <br>그리고, 책임감 있고 자유로운 영혼의 인재들이 특별한 공간에 모여 서로 소통하는 곳
+                <br>
+                <br>우리가 함께 만들 트립비토즈의 세상은 현재 있는 이 곳이 무대의 전부가 아닙니다. 세상 전부가 무대이며 영상을 통해 전세계인들과 함께 여행을 계획하려 합니다.한 사람이라도 더 많은 사람들이 스트레스 없이 여행을 떠날 수 있도록, 당신과 함께 가슴 벅찬 하루를 항해하고 싶습니다.위대한 여행 기업으로의 시작 트립비토즈와 함께 하실 분은 당신입니다! 
+              </div>
+              
             </div>
+            <div id="modal-content-regular-shadow"></div>
           </div>
           <div id='modal-value'>
-            <div class="modal-value-button left" data-value="prev"><</div>
             <div id="modal-value-content" class="modal-value-content clearfix">
               <input type="hidden" id="modal-value-page" value="0" />
               <div class='value-img'>
-                <img class="no-tablet no-pc first" src="./image/009_resource_02.png" style="">
+                <img class="no-tablet no-pc first" src="./image/modal/modal-value.png" style="margin-bottom:30px;height:100%; width: auto;">
                 <img class="no-mobile first" src="./image/004_resource_01.png" style="">
               </div>
-              <div class='value-img'>
+              <!-- <div class='value-img'>
                 <img class="no-tablet no-pc second" src="./image/010_resource_02.png" />
                 <img class="no-mobile second" src="./image/004_resource_02.png" style="">
               </div>
@@ -320,15 +363,36 @@
                 <div class="value-four-image left" >
                   <img src="./image/010_resource_06.png" />
                 </div>
+              </div> -->
+            </div>
+          </div>
+          <div id='modal-path'>
+              <div id="modal-path-content" class="modal-value-content clearfix">
+                <input type="hidden" id="modal-path-page" value="0" />
+                <div class='value-img' id="path-image-wrap">
+                  <img class="no-tablet no-pc first" src="./image/modal/modal-path.png" style="">
+                  <img class="no-mobile first" src="./image/004_resource_01.png" style="">
+                </div>
+                <!-- <div class='value-img'>
+                  <img class="no-tablet no-pc second" src="./image/010_resource_02.png" />
+                  <img class="no-mobile second" src="./image/004_resource_02.png" style="">
+                </div>
+                <div class='value-img cleafix'>
+                  <div class="value-four-image right margin" >
+                    <img src="./image/010_resource_03.png" />
+                  </div>
+                  <div class="value-four-image left margin" >
+                    <img src="./image/010_resource_04.png" />
+                  </div>
+                  <div class="value-four-image right" >
+                    <img src="./image/010_resource_05.png" />
+                  </div>
+                  <div class="value-four-image left" >
+                    <img src="./image/010_resource_06.png" />
+                  </div>
+                </div> -->
               </div>
             </div>
-            <div id='modal-value-paging'>
-              <span id="modal-value-page-ind">1</span>
-              <span>/</span>
-              <span>3</span>
-            </div>
-            <div class="modal-value-button right" data-value="next">></div>
-          </div>
           <div id='modal-career'>
             <div class="modal-header-title">
               지원절차
@@ -336,7 +400,7 @@
             <div class="modal-header-line-wrap">
               <div class="modal-header-line"></div>
             </div>
-            <div class="modal-header-sub-title">트립비토즈의 가치에 공감하는, 책임감 있는 인재를 기다립니다</div>
+            <div class="modal-header-sub-title">트립비토즈의 가치에 공감하는, <br>책임감 있는 인재를 기다립니다</div>
             <div class="modal-career-content">
               <div class="modal-career-item">
                 <div class="modal-career-item-img">
@@ -346,13 +410,10 @@
                   <div class="modal-career-item-text">
                     <div class="modal-career-item-title">서류전형</div>
                     <div class="modal-career-item-content">
-                      기본적인 이력서를 통한 1차 서류 접수<br>
+                      이력서 접수<br>
                       (합격 개별 통지)</div>
                   </div>
                 </div>
-              </div>
-              <div class="triangle-wrap">
-                <div class="triangle"></div>
               </div>
               <div class="modal-career-item">
                 <div class="modal-career-item-img">
@@ -361,12 +422,12 @@
                 <div class="modal-career-item-wrap">
                   <div class="modal-career-item-text">
                     <div class="modal-career-item-title">1차 인터뷰</div>
-                    <div class="modal-career-item-content">3명 혹은 4명이 각각 30분씩 1on1 면접을 진행합니다 </div>
+                    <div class="modal-career-item-content">
+                      팀원 3명과 1on1 면접
+                      <br>  (각 30분 진행) 
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class='triangle-wrap'>
-                <div class="triangle"></div>
               </div>
               <div class="modal-career-item">
                 <div class="modal-career-item-img">
@@ -375,12 +436,12 @@
                 <div class="modal-career-item-wrap">
                   <div class="modal-career-item-text">
                     <div class="modal-career-item-title">2차 평가</div>
-                    <div class="modal-career-item-content">인터뷰어들이 모여 토론하여 채용 여부를 결정합니다</div>
+                    <div class="modal-career-item-content">
+                      면접관 토론을 통해<br>
+                      채용 여부 결정
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class='triangle-wrap'>
-                <div class="triangle"></div>
               </div>
               <div class="modal-career-item">
                 <div class="modal-career-item-img">
@@ -389,17 +450,23 @@
                 <div class="modal-career-item-wrap">
                   <div class="modal-career-item-text">
                     <div class="modal-career-item-title">합격</div>
-                    <div class="modal-career-item-content">최종 합격 시 개별 통지 를 통합 입사일 협의</div>
+                    <div class="modal-career-item-content">
+                        최종 합격 시 개별 통지<br>
+                        (입사일 협의)
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div id="career-button-wrap">
+              <div id="career-button">
+                지원하기
+              </div>
+            </div>
           </div>
-
+          
         </div>
-        <div id="modal-close-btn-wrap">
-          <div id="modal-close-btn">x</div>
-        </div>
+        
       </div>
     </div>
   <script
