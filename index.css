@@ -2,12 +2,13 @@
   .no-mobile{
     display:none !important;
   }
-  @media screen and (min-width:768px) and (max-width:1023px){
-    .no-tablet{
-      display:none !important;
-    }
-  }
   
+  
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+  .no-tablet{
+    display:none !important;
+  }
 }
 @media screen and (min-width:1024px){
   .no-pc{
@@ -50,7 +51,7 @@
   
 }
 .fp-tableCell{
-  display:block;
+  /* display:block; */
 }
 object{
   pointer-events: none;
@@ -62,6 +63,9 @@ body{
   margin:0;
   font-family: 'NanumSquareOTFR';
 }
+.tablet-section{
+  display:none;
+}
 .clearfix::after{
   content:'';
   display:block;
@@ -69,6 +73,86 @@ body{
 }
 .float{
   float:left;
+}
+#loading-image{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:black;
+  z-index:64000;
+  display:table;
+}
+#loading-image-wrap{
+  position: relative;
+  display:table-cell;
+  vertical-align: middle;
+}
+#loading-image object{
+  height:100%;
+}
+#loading-image #loading-trip{
+  height:15px;
+  margin-top:10px;
+  width:25%;
+  float:left;
+  text-align:right;
+}
+#loading-image #loading-btoz{
+  margin-top:10px;
+  height:13px;
+  width:25%;
+  float:left;
+}
+#loading-image #loading-fox{
+  margin-top:7px;
+  height:20px;
+  width:50%;
+  float:left;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-name: tripImage;
+  z-index:10
+}
+#loading-image #loading-fox object{
+  background-color:black;
+}
+#loading-image #loading-dots-wrap{
+  width:100%;
+  display:block;
+  position: absolute;
+  width:100%;
+
+  top:50%;
+  margin-top:-10px;
+  left:0;
+  text-align:center;
+
+}
+@keyframes tripImage {
+  0%{
+    padding-left:0
+  }
+  50%{
+    padding-left:10%
+  }
+  100%{
+    padding-left:40%
+  }
+
+}
+#loading-image .loading-dot{
+  width:3px;
+  height:3px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left:10px;
+  margin-right:10px;
+  display:inline-block;
+  
 }
 .container{
   margin-left:auto;
@@ -165,7 +249,7 @@ aside.active{
 #ambition{
   /* padding-top:40%; */
   background-color:black;
-  background-image:url('./image/001_background.jpg');
+  /* background-image:url('./image/001_background.jpg'); */
   background-position: bottom;
 }
 .section{
@@ -206,7 +290,7 @@ aside.active{
 }
 .content{
   padding-top:24px;
-  font-family: NanumSquareOTFB;
+  font-family: NanumSquareOTFR;
   font-size: 15px;
   line-height: 1.42;
   text-align: center;
@@ -218,6 +302,40 @@ aside.active{
   text-align:center;
   padding-top:48px;
   width:100%;
+  position:relative;
+  height:100%;
+
+}
+.picture-content-wrap{
+  position:absolute;
+  width:100%;
+  bottom:0;
+}
+#mobile-hotel-service-img img{
+  width: 60%
+
+}
+.picture-title-wrap{
+  
+}
+.picture img{
+  width:70%;
+  max-width:315px
+}
+@media screen and (min-width: 400px) {
+  #mobile-hotel-service-img img{
+    width: 70%
+  
+  }
+  /* .picture-title-wrap{
+    position: absolute;
+    width: 100%;
+    bottom: 72%;
+  } */
+  .picture img{
+    width:80%;
+    max-width:315px
+  }
 
 }
 .picture-title{
@@ -239,11 +357,11 @@ aside.active{
   color: #383838;
 }
 .picture{
+  width:100%;
   text-align:center;
 }
-.picture img{
-  width:260px;
-}
+
+
 .mobile-box-shadow{
   -webkit-box-shadow: -2px -4px 5px 2px rgba(187,187,187,0.75);
   -moz-box-shadow: -2px -4px 5px 2px rgba(187,187,187,0.75);
@@ -266,7 +384,6 @@ aside.active{
   font-size: 14px;
 }
 #ambition-title{
-  padding-top:60px;
   color: #ffffff;
   font-family: NanumSquareOTFB;
   font-size: 26px;
@@ -275,9 +392,11 @@ aside.active{
   color:white;
   padding-top:24px;
 }
-#hotel-service-top{
-  padding-top:70px;
-}
+/* #hotel-service-top{
+  /* padding-top:70px; */
+  /* position: absolute;;
+  bottom: 50%; */
+/* } */
 #hotel-service .title{
   font-family: NanumSquareOTFB;
   font-size: 26px;
@@ -286,17 +405,19 @@ aside.active{
 }
 #hotel-service .content{
   padding-top:24px;
-  font-family: NanumSquareOTFB;
+  
   font-size: 15px;
 }
 .mobile-section{
   position: relative;
   
 }
+.content-bottom{
+  position:absolute;
+  bottom:0;
+}
 #mobile-hotel-service-img{
-  position: absolute;
-  bottom:-10px;
-  right:0;
+  padding-top:10px;
 }
 #hotel-service-picture{
   display:none;
@@ -307,7 +428,6 @@ aside.active{
 
 #vision{
   background-color:black;
-  background-image:url('./image/002_background.jpg');
   background-size:auto 120%;
 }
 #vision .section-head{
@@ -322,19 +442,19 @@ aside.active{
   padding-top:24px;
 }
 #definition{
-  padding-top: 33px;
-  height: 400px;
+  /* padding-top: 33px; */
   background-size: cover;
-  background-image:url('./image/003_background.jpg');
   /* padding-bottom:20px; */
 }
 #definition .upper{
   height: 42%;
-  padding-top:30px;
-  position:relative;
+  display:table;
+  width:100%;
+
 }
-#definition .upper .section-content-position{
-  margin-top:-100px;
+#definition .upper .upper-content-section{
+  display:table-cell;
+  vertical-align: middle;
 }
 
 #definition .upper .content{
@@ -345,9 +465,9 @@ aside.active{
   padding-top:15px;
 }
 
-#value{
+#definition #value{
   height:58%;
-  padding-top:24px;
+  padding-top:12px;
   background-color:rgba(255,255,255,0.6);
   position:relative;
 }
@@ -372,7 +492,7 @@ aside.active{
   color: #202020;
 }
 .value-section-title{
-  padding-top:24px;
+  padding-top:12px;
   font-family: NanumSquareOTFEB;
   font-size: 15px;
   font-weight: normal;
@@ -403,7 +523,7 @@ aside.active{
   
 }
 #career{
-  background-image:url('./image/004_background.jpg')
+  /* background-image:url('./image/004_background.jpg') */
 }
 #career .content{
   padding-top:23px;
@@ -415,7 +535,7 @@ aside.active{
 #join{
   background-color:rgba(0,0,0,0.2);
   padding-bottom:25px;
-  background-image:url('./image/005_background.jpg');
+  /* background-image:url('./image/005_background.jpg'); */
   background-size: auto 100%;
   background-position-x: 22%;
 }
@@ -433,7 +553,7 @@ aside.active{
 
 #contact{
   background-color:black;
-  background-image:url('./image/006_background.jpg')
+  
 }
 #contact-title{
   padding-top:14px;
@@ -477,11 +597,18 @@ aside.active{
   color: #ffffff;
 }
 footer{
-  padding-top:24px;
-  padding-bottom:37px;
+  position: absolute;
+  padding-top:30px;
+  padding-bottom:0;
+  bottom:0;
+  background-color: white;
+  width: 100%;
+}
+#contact .section-content-position1{
+  padding-bottom:200px;
 }
 footer #footer-mobile{
-  width: 300px;
+  width: 315px;
   font-family: NanumSquareOTFR;
   font-size: 9px;
   line-height: 1.67;
@@ -514,7 +641,7 @@ footer #footer-mobile{
 .icon-list{
   max-width:100%;
   list-style:none;
-  width:300px;
+  width:315px;
   padding-left:0;
 }
 .icon-item{
@@ -779,7 +906,7 @@ footer #footer-mobile{
   height:100%;
   width:100%;
   background-color:white;
-  
+   
   /* height:100%; */
 }
 #path-image-wrap{
@@ -878,6 +1005,9 @@ footer #footer-mobile{
 
 
 @media screen and (min-width: 768px) {
+  .mobile-section{
+    display:none;
+  }
   body{
     
     
@@ -926,7 +1056,7 @@ footer #footer-mobile{
   }
   .section{
     min-height:400px;
-    padding-top:60px !important;
+    /* padding-top:60px !important; */
   }
   .section-head{
     font-size: 14px;
@@ -936,6 +1066,21 @@ footer #footer-mobile{
   }
   .eng-title{
     font-size:48px !important;
+  }
+  .content{
+    padding-top:10px;
+    font-size:24px !important;
+    line-height:1.6;
+    font-family: NanumSquareOTFR !important;
+  }
+  #hotel-service-top{
+    width:100%;
+  }
+  #mobile-hotel-service-img{
+    padding-top:50px;
+  }
+  #mobile-hotel-service-img img{
+    max-width:430px;
   }
   #hotel-service .content{
     padding-top:10px;
@@ -969,15 +1114,35 @@ footer #footer-mobile{
     font-size:40px; 
   }
   .picture-wrap{
-    width:260px;
-    margin-left:5px;
-    margin-right:5px;
+    padding-top:0;
+    width:100%;
+    height:50%;
+    position: relative;;
+    background-image: linear-gradient(to bottom, #ffffff, #e4e4e4);
+  }
+  .picture,
+  .picture-title-wrap{
+    width:50%;
+    float:right;
+  }
+  .picture-title-wrap{
+    text-align:left;
+  }
+  .picture-title{
+    padding-top:150px;
   }
   .picture-sub-title{
-    
+    text-align:left;
     width:100%;
     font-size:20px;
     padding:15px;
+    padding-left:0;
+  }
+  .picture img{
+    max-width:250px;
+  }
+  .picture .mobile-box-shadow{
+    display:none;
   }
   #footer-tab-pc{
     width:750px;
@@ -996,7 +1161,7 @@ footer #footer-mobile{
   }
   #modal-content{
      width:80%;
-     height: 600px;
+     height: 650px;
      margin-left:auto;
      margin-right:auto;
   }
@@ -1044,7 +1209,11 @@ footer #footer-mobile{
     padding-right:1%;
   }
   .value-img .first{
-    padding-top: 120px;
+    
+    /* padding-top: 120px; */
+  }
+  #path-image-wrap{
+    margin-top:-170px;
   }
   .value-img .second{
     padding-top: 50px;
@@ -1073,6 +1242,22 @@ footer #footer-mobile{
     font-size: 18px;
   }
   .modal-career-content{
+    width:300px;
+    padding-top:0;
+  }
+  .modal-career-item{
+    width:300px;
+  }
+  .modal-career-item-img{
+    width:90px;
+    height:90px;
+  }
+  .modal-career-item-img img{
+    width:80px;
+    height:80px;
+    border-radius:100px;
+  }
+  /* .modal-career-content{
     padding-left:10px;
     padding-right:10px;
     padding-top: 60px;
@@ -1087,9 +1272,9 @@ footer #footer-mobile{
     margin-left:1%;
     margin-right:1%;
     float:left;
-  }
+  } */
   
-  .modal-career-item-img{
+  /* .modal-career-item-img{
     width:auto;
     height:auto;
   }
@@ -1099,7 +1284,7 @@ footer #footer-mobile{
   }
   .modal-career-item-wrap *{
     text-align:center;
-  }
+  } */
   .triangle-wrap{
     width:2%;
     float:left;
@@ -1139,6 +1324,10 @@ footer #footer-mobile{
     width:30%;
     float:left;
   }
+  #header-logo{
+    text-align:left;
+    padding-left:10px;
+  }
   #header-menu{
     padding-top:10px;;
     float:left;
@@ -1159,7 +1348,7 @@ footer #footer-mobile{
     margin-right:auto;
   }
   .eng-title{
-    font-size: 89px !important;
+    font-size: 75px !important;
   }
   #ambition .content{
     
@@ -1170,22 +1359,39 @@ footer #footer-mobile{
     height: 122px;
   }
   #hotel-service{
-    padding-top:15%;
+    /* padding-top:15%; */
+    background-image: linear-gradient(to bottom, #ffffff, #e4e4e4);
   }
-
+  .tablet-section,
+  .mobile-section{
+    display:none;
+  }
   #hotel-service-picture{
     width:960px;
+    display:block;
+    
   }
-
+  .picture-title{
+    padding-top:30px;
+  }
   .picture-sub-title{
     font-family: NanumSquareOTFB;
+    padding-right:0;
     font-size:15px;
     letter-spacing:-0.7px;
+    text-align:center;
   }
   .picture-wrap{
     width: 23%;
     margin-left: 1%;
     margin-right: 1%;
+    background-image: none;
+  }
+  .mobile-box-shadow{
+    display:none;
+  }
+  #mobile-hotel-service-img{
+    display:none;
   }
   #definition{
     padding-top:0 !important;
@@ -1227,7 +1433,15 @@ footer #footer-mobile{
     width:1024px;
   }
   .value-img .first{
-    padding-top:80px;  
+    width:100%;
+
+    padding-top:150px;  
+  }
+  #path-image-wrap.value-img{
+    margin-top: -230px;
+  }
+  #path-image-wrap.value-img .first{
+    padding-top: 0;
   }
   .value-img .second{
     height: 80%;
@@ -1236,10 +1450,65 @@ footer #footer-mobile{
   .value-four-image img{
     margin-top:70px;
   }
+  #modal-career .modal-header-sub-title{
+    font-family: NanumSquareOTFB;
+    font-size: 20px;
+  }
+  .modal-career-item{
+    float:left;
+    width:25%;
+  }
   .modal-career-content{
+    width:100%;
     max-width:900px;
     margin-left:auto;
     margin-right:auto;
+    height: 60%;
+    padding-top: 8%;
+  }
+  .modal-career-content::after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .modal-career-item-img{
+    display:inline-block;
+    float: initial;
+    width:156px;
+    height:156px;
+    border-radius:200px;
+  }
+  .modal-career-item-img img{
+    width:100%;
+    height:100%;
+  }
+  .modal-career-item-title,
+  .modal-career-item-content{
+    text-align:center;
+  }
+  .modal-career-item-wrap{
+    width:100%;
+  }
+  #contact .section-content-position1{
+    padding-bottom:100px;
+  }
+  footer{
+    
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color:white;
+    font-size:12px;
+    padding-top:12px;
+    padding-bottom:12px;
+  }
+  footer #footer-tab-pc{
+    width:900px;
+    font-size:12px
+  }
+  .icon-list{
+    width:900px;
   }
 }
 @media screen and (min-width:1200px){

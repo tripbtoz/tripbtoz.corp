@@ -1,5 +1,6 @@
 var width = $(window).width()
 var height = $(window).height()
+
 $(window).on('resize', function () {
   width = $(window).width()
   height = $(window).height()
@@ -92,10 +93,14 @@ var isNowTouching = false
 
 
 function openAside () {
+  window.myFullpage.setAllowScrolling(false);
+  window.myFullpage.setKeyboardScrolling(false);
   $('body').css({overflow: 'hidden'})
   $('aside').addClass('active')
 }
 function closeAside () {
+  window.myFullpage.setAllowScrolling(true);
+  window.myFullpage.setKeyboardScrolling(true);
   $('aside').removeClass('active')
   $('body').css({overflow: 'auto'})
 }
@@ -110,14 +115,20 @@ function closeAside () {
 //   isScrolling = false
 // }
 $(window).ready(function () {
+  // $("#modal").on('scroll', function () {
+  //   e.preventDefault()
+  //   e.stopPropagation()
+  // })
+  width = $(window).width()
+  height = $(window).height()
   if (width < 768) {
     $('.mobile-section').addClass('section')
   } else if (width < 1024) {
-    
+    $('.tablet-section').addClass('section')
   } else {
     $('.pc-section').addClass('section')
   }
-  var myFullpage = new fullpage('#fullpage', {
+  window.myFullpage = new fullpage('#fullpage', {
     //Navigation
     licenseKey: '33509323-B215456D-A8C38CEC-9E69E47C',
     // menu: '#menu',
@@ -193,7 +204,10 @@ $(window).ready(function () {
     // afterSlideLoad: function(section, origin, destination, direction){},
     // onSlideLeave: function(section, origin, destination, direction){}
   });
-  myFullpage.
+  
+  setTimeout(function () {
+    $('#loading-image').hide()
+  }, 2000)
   // $('body').on('touchstart', function () {
   //   isNowTouching = true
   // })
@@ -234,10 +248,14 @@ $(window).ready(function () {
     $("#"+target).show();
     $("#modal").addClass('show')
     $('body').css({'overflow': 'hidden'})
+    window.myFullpage.setAllowScrolling(false);
+  window.myFullpage.setKeyboardScrolling(false);
   })
   $('#modal-close-btn').click(function () {
     $('body').css({'overflow': 'auto'})
     $("#modal").removeClass('show')
+    window.myFullpage.setAllowScrolling(true);
+  window.myFullpage.setKeyboardScrolling(true);
   })
   $('.modal-value-button').click(function () {
     var button = $(this)

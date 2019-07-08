@@ -17,7 +17,35 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
+  <div id="loading-image">
+    <div id='loading-image-wrap'  class="clearfix">
+      <div id="loading-trip">
+        <object data="./icons/Trip.svg" type="image/svg+xml">
+            
+        </object>
+      </div>
+      <div id="loading-fox">
+        <div style="background-color:red;display:inline-block;height:100%;">
+          <object data="./icons/shape.svg" type="image/svg+xml">
+            
+          </object>
+        </div>
+      </div>
+      <div id="loading-dots-wrap">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </div>
+      
+      <div id="loading-btoz">
+        <object data="./icons/BtoZ.svg" type="image/svg+xml">
+            
+        </object>
+      </div>
+    </div>
+  </div>
   <aside>
     <div id="aside">
       <div  class="aside-item" data-target="hotel-service">ABOUT</div>
@@ -54,8 +82,8 @@
       </div>
   </header>
   <main id='fullpage'>
-    <div class='section paging-section' id="ambition" data-next="hotel-service">
-      <div id="ambition-title" class="section-content-position">
+    <div class='section paging-section' id="ambition" style="background-image:url('./image/001_background-min.jpg')" data-big-image='./image/001background.jpg' data-next="hotel-service">
+      <div id="ambition-title" class="section-content-position1">
         <div class="eng-title title">A great ambition</div>
         <div class="content">
             새로운 여행, 당신과 함께<br>
@@ -65,7 +93,7 @@
       </div>
     </div>
     <div class="section" id="hotel-service">
-      <div class="" id='hotel-service-top'>
+      <div class="content-bottom" id='hotel-service-top'>
         <div class="title no-pc fade-in">
             내 손 안에서 일상이
             <br>여행인 세상을 만듭니다
@@ -73,137 +101,244 @@
         <div class="title no-mobile no-tablet fade-in">
           내 손 안에서 일상이 여행인 세상을 만듭니다
         </div>
-        <div class="content no-pc fade-in" id='hotel-service-content' style="color:black;">
+        <div class="content no-mobile fade-in" id='hotel-service-content' style="color:black;">
+          데이터와 기술을 통해 더 많은 사람들이 더 많은 곳을 여행할 수 있도록 하고, <br> 이 경험을 생생하게 전세계인들과 공유할 수 있게 합니다
+        </div>
+        <div class="content no-pc fade-in no-tablet" id='hotel-service-content' style="color:black;">
           <div>
             데이터와 기술을 통해 더 많은 사람들이 <br> 더 많은 곳을 여행할 수 있도록 하고, <br>
             이 경험을 생생하게 전세계인들과<br> 공유할 수 있게 합니다
           </div>
           
-          <div id="mobile-hotel-service-img" style="text-align:right;">
-            <img src="image/mobile-hotel-service.png" style="width:205px;" />
-          </div>
+          
         </div>
-        <div class="content no-mobile no-tablet fade-in" id='hotel-service-content' style="color:black;">
-          데이터와 기술을 통해 더 많은 사람들이 더 많은 곳을 여행할 수 있도록 하고, <br> 이 경험을 생생하게 전세계인들과 공유할 수 있게 합니다
+        <div id="mobile-hotel-service-img" style="text-align:right;">
+          <img src="image/mobile-hotel-service.png" style="" />
+        </div>
+        <div id="hotel-service-picture" class="clearfix" style="">
+          <div class="picture-wrap" id="intro-first-picture" data-next='intro-second-picture' data-prev='hotel-service' >
+            <div class='picture-title'>
+              여행 영상
+            </div>
+            <div class="picture-sub-title">
+              여행을 하며 찍은 영상을<br>
+              공유하며 리워드 받기
+            </div>
+            <div class="picture" style="width:100%;">
+              <img src="./image/002_mobile_03.png" style="width:100%;">
+            </div>
+            <div class="mobile-box-shadow">
+   
+            </div>
+          </div>
+          <div class="picture-wrap" id="intro-second-picture" data-next='intro-third-picture' data-prev='intro-first-picture' >
+            <div class='picture-title'>
+              카메라
+            </div>
+            <div class="picture-sub-title">
+              여행에 최적화된 <br>카메라 촬영기능
+            </div>
+            <div class="picture" style="width:100%;">
+              <img src="./image/002_mobile_04.png" style="width:100%;">
+            </div>
+            <div class="mobile-box-shadow">
+            </div>
+          </div>
+          <div class="picture-wrap"  id="intro-third-picture" data-next='intro-fourth-picture' data-prev='intro-second-picture' >
+            <div class='picture-title'>
+              랭킹
+            </div>
+            <div class="picture-sub-title">
+              사진의 시대는 끝 동영상으로<br>내 손안의 여행 시작
+            </div>
+            <div class="picture" style="width:100%;">
+              <img src="./image/002_mobile_05.png" style="width:100%;">
+            </div>
+            <div class="mobile-box-shadow">
+   
+            </div>
+          </div>
+          <div class="picture-wrap"  id="intro-fourth-picture" data-next='vision' data-prev='intro-third-picture' >
+            <div class='picture-title'>
+              호텔예약
+            </div>
+            <div class="picture-sub-title">
+              전세계 80만개 이상의<br>
+              실시간 호텔 예약
+            </div>
+            <div class="picture" style="width:100%;">
+              <img src="./image/002_mobile_02.png" style="width:100%;">
+            </div>
+            <div class="mobile-box-shadow">
+   
+            </div>
+          </div>
         </div>
       </div>
      
-      <div id="hotel-service-picture" class="clearfix" style="">
-        <div class="picture-wrap" id="intro-first-picture" data-next='intro-second-picture' data-prev='hotel-service' >
-          <div class="picture-sub-title">
-            여행을 하며 찍은 영상을<br>
-            공유하며 리워드 받기
-          </div>
-          <div class="picture" style="width:100%;">
-            <img src="./image/002_mobile_03.png" style="width:100%;">
-          </div>
-          <div class="mobile-box-shadow">
- 
-          </div>
-        </div>
-        <div class="picture-wrap" id="intro-second-picture" data-next='intro-third-picture' data-prev='intro-first-picture' >
-          <div class="picture-sub-title">
-            여행에 최적화된 <br>카메라 촬영기능
-          </div>
-          <div class="picture" style="width:100%;">
-            <img src="./image/002_mobile_04.png" style="width:100%;">
-          </div>
-          <div class="mobile-box-shadow">
-          </div>
-        </div>
-        <div class="picture-wrap"  id="intro-third-picture" data-next='intro-fourth-picture' data-prev='intro-second-picture' >
-          <div class="picture-sub-title">
-            사진의 시대는 끝 동영상으로<br>내 손안의 여행 시작
-          </div>
-          <div class="picture" style="width:100%;">
-            <img src="./image/002_mobile_05.png" style="width:100%;">
-          </div>
-          <div class="mobile-box-shadow">
- 
-          </div>
-        </div>
-        <div class="picture-wrap"  id="intro-fourth-picture" data-next='vision' data-prev='intro-third-picture' >
-          <div class="picture-sub-title">
-            전세계 80만개 이상의<br>
-            실시간 호텔 예약
-          </div>
-          <div class="picture" style="width:100%;">
-            <img src="./image/002_mobile_02.png" style="width:100%;">
-          </div>
-          <div class="mobile-box-shadow">
- 
-          </div>
-        </div>
-      </div>
       
     </div>
-    <div class="picture-wrap mobile-section" id="intro-first-picture" data-next='intro-second-picture' data-prev='hotel-service' >
+    <div class="mobile-section" id="intro-first-picture" data-next='intro-second-picture' data-prev='hotel-service' >
       <div class="picture-wrap">
-        <div class='picture-title'>
-          여행 영상
-        </div>
-        <div class="picture-sub-title">
-          여행을 하며 찍은 영상을<br>
-          공유하며 리워드 받기
-        </div>
-        <div class="picture" style="width:100%;">
-          <img src="./image/002_mobile_03.png" >
-        </div>
-        <div class="mobile-box-shadow">
-
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              여행 영상
+            </div>
+            <div class="picture-sub-title">
+              여행을 하며 찍은 영상을<br>
+              공유하며 리워드 받기
+            </div>
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_03.png" >
+            <div class="mobile-box-shadow"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="picture-wrap mobile-section" id="intro-second-picture" data-next='intro-third-picture' data-prev='intro-first-picture' >
+    <div class="mobile-section" id="intro-second-picture" data-next='intro-third-picture' data-prev='intro-first-picture' >
       <div class="picture-wrap">
-        <div class='picture-title'>
-          카메라
-        </div>
-        <div class="picture-sub-title">
-          여행에 최적화된 <br>카메라 촬영기능
-        </div>
-        <div class="picture" style="width:100%;">
-          <img src="./image/002_mobile_04.png">
-        </div>
-        <div class="mobile-box-shadow">
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              카메라
+            </div>
+            <div class="picture-sub-title">
+              여행에 최적화된 <br>카메라 촬영기능
+            </div>
+          </div>
+          <div class="picture" style="width:100%;">
+            <img src="./image/002_mobile_04.png">
+            <div class="mobile-box-shadow">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="picture-wrap mobile-section"  id="intro-third-picture" data-next='intro-fourth-picture' data-prev='intro-second-picture' >
+    <div class="mobile-section"  id="intro-third-picture" data-next='intro-fourth-picture' data-prev='intro-second-picture' >
       <div class="picture-wrap">
-        <div class='picture-title'>
-          랭킹
-        </div>
-        <div class="picture-sub-title">
-          사진의 시대는 끝 동영상으로<br>내 손안의 여행 시작
-        </div>
-        <div class="picture" style="width:100%;">
-          <img src="./image/002_mobile_05.png" >
-        </div>
-        <div class="mobile-box-shadow">
-
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              랭킹
+            </div>
+            <div class="picture-sub-title">
+              사진의 시대는 끝 동영상으로<br>내 손안의 여행 시작
+            </div>
+          </div>
+          <div class="picture">
+            <img src="./image/002_mobile_05.png" >
+            <div class="mobile-box-shadow">
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="mobile-section"  id="intro-fourth-picture" data-next='vision' data-prev='intro-third-picture' >
       <div class="picture-wrap">
-        <div class='picture-title'>
-          호텔예약
-        </div>
-        <div class="picture-sub-title">
-          전세계 80만개 이상의<br>
-          실시간 호텔 예약
-        </div>
-        <div class="picture" style="width:100%;">
-          <img src="./image/002_mobile_02.png">
-        </div>
-        <div class="mobile-box-shadow">
-
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              호텔예약
+            </div>
+            <div class="picture-sub-title">
+              전세계 80만개 이상의<br>
+              실시간 호텔 예약
+            </div>
+          </div>
+          <div class="picture">
+            <img src="./image/002_mobile_02.png">
+            <div class="mobile-box-shadow">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="section paging-section" data-prev='hotel-service' data-mobile-prev='intro-fourth-picture' data-next="definition" id="vision">
-      <div  class="section-content-position">
+    <!--  -->
+    <div class="tablet-section" id="intro-first-picture">
+      <div class="picture-wrap">
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              여행 영상
+            </div>
+            <div class="picture-sub-title">
+              여행을 하며 찍은 영상을<br>
+              공유하며 리워드 받기
+            </div>
+          </div>
+          <div class="picture">
+            <img src="./image/002_mobile_03.png" >
+            <div class="mobile-box-shadow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="picture-wrap">
+        <div class="picture-content-wrap">
+          <div class="picture-title-wrap">
+            <div class='picture-title'>
+              카메라
+            </div>
+            <div class="picture-sub-title">
+              여행에 최적화된 <br>카메라 촬영기능
+            </div>
+          </div>
+          <div class="picture" >
+            <img src="./image/002_mobile_04.png">
+            <div class="mobile-box-shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tablet-section"  id="intro-third-picture" data-next='intro-fourth-picture' data-prev='intro-second-picture' >
+        <div class="picture-wrap">
+          <div class="picture-content-wrap">
+            <div class="picture-title-wrap">
+              <div class='picture-title'>
+                랭킹
+              </div>
+              <div class="picture-sub-title">
+                사진의 시대는 끝 동영상으로<br>내 손안의 여행 시작
+              </div>
+            </div>
+            <div class="picture" style="">
+              <img src="./image/002_mobile_05.png" >
+              <div class="mobile-box-shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="picture-wrap">
+          <div class="picture-content-wrap">
+            <div class="picture-title-wrap">
+              <div class='picture-title'>
+                호텔예약
+              </div>
+              <div class="picture-sub-title">
+                전세계 80만개 이상의<br>
+                실시간 호텔 예약
+              </div>
+            </div>
+            <div class="picture" style="">
+              <img src="./image/002_mobile_02.png">
+              <div class="mobile-box-shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  -->
+
+
+    <div 
+      class="section paging-section" 
+      id="vision"
+      style="background-image:url('./image/002_background-min.jpg')"
+      data-big-image="./image/002_background.jpg"
+      >
+      <div  class="section-content-position1">
         <div class='section-head'>
           ABOUT
         </div>
@@ -221,9 +356,14 @@
       </div>
     </div>
     
-    <div class="clearfix section paging-section"  id="definition" data-next='career' data-prev='vision'>
+    <div 
+      class="clearfix section paging-section" 
+      id="definition"
+      style="background-image:url('./image/003_background-min.jpg')"
+      data-big-image="./image/003_background.jpg"
+      >
       <div class="upper">
-        <div class="section-content-position">
+        <div class="upper-content-section" style="padding-top:40px">
           <div class='section-head'>
             VALUE
           </div>
@@ -241,8 +381,8 @@
           </div>
         </div>
       </div>
-      <div class="section2 " id="value">
-        <div class='container section-content-position'>
+      <div class="upper " id="value">
+        <div class='container upper-content-section'>
           <div id="value-title" >
             VALUE
           </div>
@@ -272,8 +412,13 @@
         </div>
       </div>
     </div>
-    <div class="section paging-section" id="career" data-next='join' data-prev='definition'>
-        <div  class="section-content-position">
+    <div 
+      class="section paging-section"
+      id="career" 
+      style="background-image:url('./image/004_background-min.jpg')"
+      data-big-image='./image/004_background.jpg'
+    >
+        <div  class="section-content-position1">
           <div class='section-head fade-in'>
             CAREER
           </div>
@@ -292,8 +437,13 @@
           </div>
         </div>
     </div>
-    <div class="section paging-section" id="join" data-next='contact' data-prev='career'>
-        <div class="section-content-position">
+    <div 
+      class="section paging-section" 
+      id="join"
+      style="background-image:url('./image/005_background-min.jpg')"
+      data-big-image='./image/005_background.jpg'
+      >
+        <div class="section-content-position1">
           <div id='join-title' class="eng-title fade-in">
             A stage of<br>
             your own
@@ -309,8 +459,13 @@
           </div>
         </div>
     </div>
-    <div class="section paging-section" id="contact" data-prev='join'>
-      <div  class="section-content-position">
+    <div 
+      class="section paging-section" 
+      id="contact" 
+      style="background-image:url('./image/006_background-min.jpg')"
+      data-big-image='./image/006_background.jpg'
+      >
+      <div  class="section-content-position1">
         <div class='section-head'>
             CONTACT
           </div>
@@ -323,61 +478,62 @@
         </div>
         <div class='second-content-wrap'>
           <div class="second-content">
-                TEL : 02-711-6880<br>
+                TEL : <span style="color:white;text-decoration:none">02-711-6880</span><br>
                 EMAIL : recruit@tripbtoz.com
               
           </div>
         </div>
       </div>
+      <footer>
+        <div class="container  no-tablet no-pc" id='footer-mobile'>
+          <div id="company-name">주식회사 트립비토즈</div>
+          <div id="footer-content">
+            대표이사 : 정지하 <span class='footer-item'>소재지 : (04020) 서울특별시 마포구 백범로 31길 21</span>
+            <br>서울창업허브 별관 415호
+            <span class='footer-item'>이메일 : cs@tripbtoz.com</span>
+            <br>연락처 : 02-711-6880   <span class='footer-item'>개인정보관리책임자 : 황복연</span>
+            <br>사업자등록번호 : 778-86-00179
+            <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
+            <br>통신판매업신고번호 : 제2017-서울마포-1760호
+            <br>Copyright (c) 2015. Tripbtoz.CO.,LTD All Rights Reserved.
+          </div>
+        </div>
+        <div class="container no-mobile" id="footer-tab-pc">
+            <div id="company-name">주식회사 트립비토즈</div>
+            대표이사 : 정지하  <span class='footer-item'>소재지 : (04020) 서울특별시 강남구 테헤란로 415,스파크플러스 </span>3층  <br>이메일 : cs@tripbtoz.com</span>
+            <span class='footer-item'>연락처 : 02-711-6880</span> <span class='footer-item'>개인정보관리책임자 : 황복연</span> <span class='footer-item'>사업자등록번호 : 778-86-00179</span> <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
+            <br>통신판매업신고번호 : 제2017-서울마포-1760호
+            <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
+        </div>
+        <ul class="container icon-list clearfix">
+          <li class="icon-item">
+            <a href="https://www.facebook.com/Tripbtoz/" target="_blank">
+              <object class="sns-icon" data="./icons/icn-facebook.svg" type="image/svg+xml">
+                <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_01.png">
+              </object>
+              
+            </a>
+          </li>
+          <li class="icon-item">
+            <a href="https://www.youtube.com/channel/UCfTKMWl5UtNij27g8kTDx2w" target="_blank">
+              <object class="sns-icon" data="./icons/icn-youtube.svg" type="image/svg+xml">
+                <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_02.png">
+              </object>
+            </a>
+          </li>
+          <li class="icon-item">
+            <a href="https://www.instagram.com/tripbtoz/" target="_blank">
+              <object class="sns-icon" data="./icons/icn-instagram.svg" type="image/svg+xml">
+                <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_03.png">
+              </object>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
     
   </main>
-  <footer>
-    <div class="container  no-tablet no-pc" id='footer-mobile'>
-      <div id="company-name">주식회사 트립비토즈</div>
-      <div id="footer-content">
-        대표이사 : 정지하 <span class='footer-item'>소재지 : (04020) 서울특별시 마포구 백범로 31길 21</span>
-        <br>서울창업허브 별관 415호
-        <span class='footer-item'>이메일 : cs@tripbtoz.com</span>
-        <br>연락처 : 02-711-6880   <span class='footer-item'>개인정보관리책임자 : 황복연</span>
-        <br>사업자등록번호 : 778-86-00179
-        <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
-        <br>통신판매업신고번호 : 제2017-서울마포-1760호
-        <br>Copyright (c) 2015. Tripbtoz.CO.,LTD All Rights Reserved.
-      </div>
-    </div>
-    <div class="container no-pc no-mobile" id="footer-tab-pc">
-        <div id="company-name">주식회사 트립비토즈</div>
-        <br>대표이사 : 정지하  <span class='footer-item'>소재지 : (04020) 서울특별시 강남구 테헤란로 415,스파크플러스 </span>3층  <br>이메일 : cs@tripbtoz.com</span>
-        <span class='footer-item'>연락처 : 02-711-6880</span> <span class='footer-item'>개인정보관리책임자 : 황복연</span> <span class='footer-item'>사업자등록번호 : 778-86-00179</span> <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
-        <br>통신판매업신고번호 : 제2017-서울마포-1760호
-        <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
-    </div>
-    <ul class="container icon-list clearfix">
-      <li class="icon-item">
-        <a href="https://www.facebook.com/Tripbtoz/" target="_blank">
-          <object class="sns-icon" data="./icons/icn-facebook.svg" type="image/svg+xml">
-            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_01.png">
-          </object>
-          
-        </a>
-      </li>
-      <li class="icon-item">
-        <a href="https://www.youtube.com/channel/UCfTKMWl5UtNij27g8kTDx2w" target="_blank">
-          <object class="sns-icon" data="./icons/icn-youtube.svg" type="image/svg+xml">
-            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_02.png">
-          </object>
-        </a>
-      </li>
-      <li class="icon-item">
-        <a href="https://www.instagram.com/tripbtoz/" target="_blank">
-          <object class="sns-icon" data="./icons/icn-instagram.svg" type="image/svg+xml">
-            <img src="https://qeuxmtqauiit1072966.cdn.ntruss.com/pc-web/main/logo_icon/014_copyrig_sns_icon_03.png">
-          </object>
-        </a>
-      </li>
-    </ul>
-  </footer>
+  
   <div id='modal'>
       
       <div id="modal-content-wrap">
@@ -425,8 +581,8 @@
             <div id="modal-value-content" class="modal-value-content clearfix">
               <input type="hidden" id="modal-value-page" value="0" />
               <div class='value-img'>
-                <img class="no-tablet no-pc first" src="./image/modal/modal-value.png" style="margin-bottom:30px;height:100%; width: auto;">
-                <img class="no-mobile first" src="./image/004_resource_01.png" style="">
+                <img class="no-pc first" src="./image/modal/value.jpg" style="margin-bottom:30px;height:100%; width: auto;">
+                <img class="no-mobile no-tablet first" src="./image/modal/desktop-definition.jpg" style="">
               </div>
               <!-- <div class='value-img'>
                 <img class="no-tablet no-pc second" src="./image/010_resource_02.png" />
