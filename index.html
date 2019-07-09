@@ -18,41 +18,22 @@
 </head>
 <body>
   <div id="loading-image">
-    <div id='loading-image-wrap'  class="clearfix">
-      <div id="loading-trip">
-        <object data="./icons/Trip.svg" type="image/svg+xml">
-            
-        </object>
-      </div>
-      <div id="loading-fox">
-        <div style="background-color:red;display:inline-block;height:100%;">
-          <object data="./icons/shape.svg" type="image/svg+xml">
-            
-          </object>
-        </div>
-      </div>
-      <div id="loading-dots-wrap">
-        <div class="loading-dot"></div>
-        <div class="loading-dot"></div>
-        <div class="loading-dot"></div>
-        <div class="loading-dot"></div>
-        <div class="loading-dot"></div>
-      </div>
+    <div id='loading-image-wrap'  class="clearfix" >
+      <img src='./image/loading.gif' />
       
-      <div id="loading-btoz">
-        <object data="./icons/BtoZ.svg" type="image/svg+xml">
-            
-        </object>
-      </div>
     </div>
   </div>
   <aside>
     <div id="aside">
-      <div  class="aside-item" data-target="hotel-service">ABOUT</div>
-      <div  class="aside-item" data-target="vision">MESSAGE</div>
-      <div  class="aside-item" data-target="value">VALUE</div>
-      <div  class="aside-item" data-target='career'>CAREER</div>
-      <div  class="aside-item" data-target="contact">CONTACT</div>
+      <div class="aside-item no-pc" data-scroll="secondPage">ABOUT</div>
+      <div class="aside-item no-tablet no-pc" data-scroll="7thPage"><a href='#7thPage'>MESSAGE</a></div>
+      <div class="aside-item no-tablet no-pc" data-scroll="8thPage"><a href='#8thPage'>VALUE</a></div>
+      <div class="aside-item no-tablet no-pc" data-scroll='10thPage'><a href='#10thPage'>CAREER</a></div>
+      <div class="aside-item no-tablet no-pc" data-scroll="11thPage"><a href='#11thPage'>CONTACT</a></div>
+      <div class="aside-item no-mobile no-pc" data-scroll="5thPage"><a href='#5thPage'>MESSAGE</a></div>
+      <div class="aside-item no-mobile no-pc" data-scroll="6thPage"><a href='#6thPage'>VALUE</a></div>
+      <div class="aside-item no-mobile no-pc" data-scroll='8thPage'><a href='#8thPage'>CAREER</a></div>
+      <div class="aside-item no-mobile no-pc" data-scroll="9thPage"><a href='#9thPage'>CONTACT</a></div>
     </div>
   </aside>
   <header>
@@ -73,23 +54,28 @@
       </div>
       <div id="header-menu" >
         <div class="container clearfix" id="header-menu-wrap">
-          <div class="menu float-right" data-target="contact">CONTACT</div>
-          <div class="menu float-right" data-target='career'>CAREER</div>
-          <div class="menu float-right" data-target="value">VALUE</div>
-          <div class="menu float-right" data-target="vision">MESSAGE</div>
-          <div class="menu float-right" data-target="hotel-service">ABOUT</div>
+          <div class="menu float-right" data-menu3a3chor="7thPage"><a href='#7thPage'>CONTACT</a></div>
+          <div class="menu float-right" data-menuanchor='6thPage'><a href='#6thPage'>CAREER</a></div>
+          <div class="menu float-right" data-menu2anchor="4thPage"><a href='#4thPage'>VALUE</a></div>
+          <div class="menu float-right" data-menu3anchor="3rdPage"><a href='#3rdPage'>MESSAGE</a></div>
+          <div class="menu float-right" data-menuanchor="secondPage"><a href="#secondPage">ABOUT</a></div>
         </div>
       </div>
   </header>
   <main id='fullpage'>
-    <div class='section paging-section' id="ambition" style="background-image:url('./image/001_background-min.jpg')" data-big-image='./image/001background.jpg' data-next="hotel-service">
+    <div class='section paging-section'
+       id="ambition" 
+       style="background-image:url('./image/001_background-min.jpg')"
+       data-big-image='./image/001_background.jpg' data-next="hotel-service">
       <div id="ambition-title" class="section-content-position1">
         <div class="eng-title title">A great ambition</div>
         <div class="content">
             새로운 여행, 당신과 함께<br>
             가슴 벅찬 하루를 만들고 싶습니다.
         </div>
-        
+        <div id="mouse-icon">
+          <div id='mouse-moving'></div>
+        </div>
       </div>
     </div>
     <div class="section" id="hotel-service">
@@ -495,7 +481,7 @@
             <br>사업자등록번호 : 778-86-00179
             <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
             <br>통신판매업신고번호 : 제2017-서울마포-1760호
-            <br>Copyright (c) 2015. Tripbtoz.CO.,LTD All Rights Reserved.
+            <br>Copyright ⓒ 2015. Tripbtoz, Inc. All Rights Reserved.
           </div>
         </div>
         <div class="container no-mobile" id="footer-tab-pc">
@@ -503,7 +489,7 @@
             대표이사 : 정지하  <span class='footer-item'>소재지 : (04020) 서울특별시 강남구 테헤란로 415,스파크플러스 </span>3층  <br>이메일 : cs@tripbtoz.com</span>
             <span class='footer-item'>연락처 : 02-711-6880</span> <span class='footer-item'>개인정보관리책임자 : 황복연</span> <span class='footer-item'>사업자등록번호 : 778-86-00179</span> <span class='footer-item'>관광사업자등록번호 : 제2015-000018호</span>
             <br>통신판매업신고번호 : 제2017-서울마포-1760호
-            <br>Copyright (c) 2015. Tripbtoz.CO.,LTD ALL Rights Reserved.
+            <br>Copyright ⓒ 2015. Tripbtoz, Inc. ALL Rights Reserved.
         </div>
         <ul class="container icon-list clearfix">
           <li class="icon-item">

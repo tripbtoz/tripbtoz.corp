@@ -50,6 +50,22 @@
   box-sizing:border-box;
   
 }
+a{
+  text-decoration: none;
+  color:inherit
+}
+a:active,
+a:focus{
+  color:inherit
+}
+#fp-nav ul li a span, #menu-line, .fp-slidesNav ul li a span{
+  display:none;
+  background-color:white;
+  transition:background-color 0.3s;
+}
+#fp-nav ul li a span.black, #menu-line.black, .fp-slidesNav ul li a span.black{
+  background-color:black;
+}
 .fp-tableCell{
   /* display:block; */
 }
@@ -80,7 +96,7 @@ body{
   left:0;
   width:100%;
   height:100%;
-  background-color:black;
+  background-color:rgb(251,251,251);
   z-index:64000;
   display:table;
 }
@@ -88,6 +104,11 @@ body{
   position: relative;
   display:table-cell;
   vertical-align: middle;
+  text-align:center;
+}
+#loading-image-wrap img{
+  width:90%;
+  max-width:700px;
 }
 #loading-image object{
   height:100%;
@@ -1307,6 +1328,9 @@ footer #footer-mobile{
 }
 
 @media screen and (min-width:1024px) {
+  #fp-nav ul li a span, #menu-line, .fp-slidesNav ul li a span{
+    display:block
+  }
   aside{
     display:none;
   }
@@ -1338,6 +1362,47 @@ footer #footer-mobile{
   .float-right{
     float:right;
   }
+  #ambition #mouse-icon{
+
+    width: 40px;
+    height: 63px;
+    border-radius: 28px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    margin-left: -15px;
+  }
+  #ambition #mouse-moving{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -5px;
+    animation-name: mouseMoving;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes mouseMoving{
+    0% {
+      top: 10px
+    }
+    75% {
+      top: 40px;
+      opacity: 0;
+    }
+    100%{
+      top:40px;
+      opacity: 0;
+    }
+  }
+
   #ambition{
     min-height:500px;
   }
@@ -1608,7 +1673,7 @@ footer #footer-mobile{
   }
   .value-section-title,
   .value-section-content{
-    font-size:25px;
+    font-size:19px;
     line-height:30px;
   }
   /* #career,
@@ -1617,7 +1682,7 @@ footer #footer-mobile{
     padding-top:200px !important;
   } */
   .value-img .first{
-    padding-top:20px;
+    /* padding-top:20px; */
     max-height:530px;
   }
   .value-four-image img {

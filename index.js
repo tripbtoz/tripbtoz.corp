@@ -2,8 +2,16 @@ var width = $(window).width()
 var height = $(window).height()
 
 $(window).on('resize', function () {
+  if (
+    width > 768 && $(window).width() < 768 || // 모바일로 사이즈 바뀜
+    (width < 768 || width > 1024) && $(window).width() > 768 && $(window).width() < 1024 || // 태블릿으로 바뀜
+    width < 1024 && $(window).width() >= 1024 // 데스크탑 사이즈 바뀜
+  ) {
+    window.location.reload()
+  } 
   width = $(window).width()
   height = $(window).height()
+  
 })
 // alert('a2')
 
@@ -28,9 +36,9 @@ var isNowTouching = false
 //      return false
 //   }
   
-//   const windowScrollTop = $(window).scrollTop()
+//   var windowScrollTop = $(window).scrollTop()
 //   console.log('window scroll ' + windowScrollTop)
-//   const THRESH_HOLD = width < 768 ? 5 : 5
+//   var THRESH_HOLD = width < 768 ? 5 : 5
 //   if (windowScrollTop > scrollNow + THRESH_HOLD) {
 //     console.log('scroll')
 //     scrollNext()
@@ -46,13 +54,13 @@ var isNowTouching = false
 //   if (isScrolling) {
 //     return false
 //   }
-//   const prev = width < 768 ?  $('#' + scrollNowId).attr('data-mobile-prev') || $('#' + scrollNowId).attr('data-prev') : $('#' + scrollNowId).attr('data-prev')
+//   var prev = width < 768 ?  $('#' + scrollNowId).attr('data-mobile-prev') || $('#' + scrollNowId).attr('data-prev') : $('#' + scrollNowId).attr('data-prev')
 //   if (!prev) {
 //     return false
 //   }
 //   isScrolling = true
-//   const prevTop = $('#' + prev).offset().top
-//   const scrollTop = prevTop
+//   var prevTop = $('#' + prev).offset().top
+//   var scrollTop = prevTop
 //   $('html,body').animate({
 //     'scrollTop': scrollTop
 //   }, 500, function () {
@@ -69,7 +77,7 @@ var isNowTouching = false
 //   if (isScrolling) {
 //     return false
 //   }
-//   const next = width < 768 ? ($('#' + scrollNowId).attr('data-mobile-next') || $('#' + scrollNowId).attr('data-next')) : $('#' + scrollNowId).attr('data-next')
+//   var next = width < 768 ? ($('#' + scrollNowId).attr('data-mobile-next') || $('#' + scrollNowId).attr('data-next')) : $('#' + scrollNowId).attr('data-next')
 //   console.log('next : ' + next)
 //   if (!next) {
 //     return false
@@ -77,8 +85,8 @@ var isNowTouching = false
 
 //   isScrolling = true
   
-//   const nextTop = $('#' + next).offset().top
-//   const scrollTop = nextTop
+//   var nextTop = $('#' + next).offset().top
+//   var scrollTop = nextTop
 //   console.log('scroll-top : ' + scrollTop)
 //   $('html,body').animate({
 //     'scrollTop': scrollTop
@@ -119,6 +127,15 @@ $(window).ready(function () {
   //   e.preventDefault()
   //   e.stopPropagation()
   // })
+  $('[data-big-image]').each(function () {
+    var bigImageSrc = $(this).data('big-image')
+    var id = $(this).attr('id')
+    var img = new Image()
+    img.src = bigImageSrc
+    img.onload = function () {
+      $('#'+id).css({'backgroundImage': 'url("' + bigImageSrc + '")'})
+    }
+  })
   width = $(window).width()
   height = $(window).height()
   if (width < 768) {
@@ -128,16 +145,23 @@ $(window).ready(function () {
   } else {
     $('.pc-section').addClass('section')
   }
+  var anchors = []
+  if (width < 768) {
+    anchors = ['firstPage', 'secondPage', "3rdPage", "4thPage", '5thPage', '6thPage',  '7thPage', '8thPage', '9thPage','10thPage', '11thPage']
+  } else if (width < 1024) {
+    anchors = ['firstPage', 'secondPage', "3rdPage", "4thPage", '5thPage', '6thPage',  '7thPage', '8thPage', '9thPage','10thPage', '11thPage']
+  }
   window.myFullpage = new fullpage('#fullpage', {
     //Navigation
     licenseKey: '33509323-B215456D-A8C38CEC-9E69E47C',
-    // menu: '#menu',
     // lockAnchors: false,
-    // anchors:['firstPage', 'secondPage'],
-    // navigation: false,
+    anchors:[ 'firstPage', 'secondPage', "3rdPage", "4thPage", '5thPage', '6thPage',  '7thPage'],
+    menu: '#header-menu-wrap',
+    navigation: true,
     // navigationPosition: 'right',
     // navigationTooltips: ['firstSlide', 'secondSlide'],
-    // showActiveTooltip: false,
+    showActiveTooltip: true,
+    slidesNavigation: true,
     // slidesNavigation: false,
     // slidesNavPosition: 'bottom',
   
@@ -192,7 +216,7 @@ $(window).ready(function () {
     //Custom selectors
     sectionSelector: '.section',
     slideSelector: '.slide',
-  
+    navigation: true,
     // lazyLoading: true,
   
     // //events
@@ -202,7 +226,14 @@ $(window).ready(function () {
     // afterResize: function(width, height){},
     // afterResponsive: function(isResponsive){},
     // afterSlideLoad: function(section, origin, destination, direction){},
-    // onSlideLeave: function(section, origin, destination, direction){}
+    onLeave: function (origin, destination, direction){
+      var menues = $('#fp-nav ul li a span, #menu-line, .fp-slidesNav ul li a span')
+      if (destination.index === 1 || destination.index === 3 || destination.index === 5) {
+        menues.addClass('black')
+      } else {
+        menues.removeClass('black')
+      }
+    }
   });
   
   setTimeout(function () {
@@ -220,6 +251,19 @@ $(window).ready(function () {
     e.preventDefault()
     e.stopPropagation()
   })
+  $('.aside-item').click(function () {
+    closeAside()
+    var scroll = $(this).data('scroll')
+    var scrollValue = 0
+    if (scroll.includes('second')) {
+      scrollValue = 2
+    } else {
+      scrollValue = parseInt(scroll.replace(/D/g, ''))
+    }
+    if (scrollValue !== 0) {
+      window.myFullpage.moveTo(scrollValue)
+    }
+  })
   $('aside').click(closeAside)
   // $('.section').each(function () {
   //   $(this).css({height: $(window).height()})
@@ -227,19 +271,19 @@ $(window).ready(function () {
   // })
   // setSection()
 
-  $(".menu, .aside-item").click(function(){
-    closeAside()
-    var target = $(this).attr('data-target')
-    var scrollTop = $("#"+target).offset().top
-    if (window.width < 768) {
-      scrollTop -= 47
-    } else {
-      scrollTop -= 92
-    }
-    $('html,body').animate({
-      'scrollTop': scrollTop
-    }, 500)
-  })
+  // $(".menu, .aside-item").click(function(){
+  //   closeAside()
+  //   var target = $(this).attr('data-target')
+  //   var scrollTop = $("#"+target).offset().top
+  //   if (window.width < 768) {
+  //     scrollTop -= 47
+  //   } else {
+  //     scrollTop -= 92
+  //   }
+  //   $('html,body').animate({
+  //     'scrollTop': scrollTop
+  //   }, 500)
+  // })
   $('.button').click(function(){
     var button = $(this)
     var target = button.attr('data-modal-target');
@@ -247,15 +291,15 @@ $(window).ready(function () {
     $('#modal-close-btn-wrap').show()
     $("#"+target).show();
     $("#modal").addClass('show')
-    $('body').css({'overflow': 'hidden'})
+    // $('body').css({'overflow': 'hidden'})
     window.myFullpage.setAllowScrolling(false);
-  window.myFullpage.setKeyboardScrolling(false);
+    window.myFullpage.setKeyboardScrolling(false);
   })
   $('#modal-close-btn').click(function () {
-    $('body').css({'overflow': 'auto'})
+    // $('body').css({'overflow': 'auto'})
     $("#modal").removeClass('show')
     window.myFullpage.setAllowScrolling(true);
-  window.myFullpage.setKeyboardScrolling(true);
+    window.myFullpage.setKeyboardScrolling(true);
   })
   $('.modal-value-button').click(function () {
     var button = $(this)
