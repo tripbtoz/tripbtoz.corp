@@ -122,11 +122,15 @@ function closeAside () {
 //   })
 //   isScrolling = false
 // }
+function clickApplyButton () {
+  window.location.href = 'https://www.rocketpunch.com/companies/tripbtoz/jobs'
+}
 $(window).ready(function () {
   // $("#modal").on('scroll', function () {
   //   e.preventDefault()
   //   e.stopPropagation()
   // })
+  $('#career-button').click(clickApplyButton)
   $('[data-big-image]').each(function () {
     var bigImageSrc = $(this).data('big-image')
     var id = $(this).attr('id')
