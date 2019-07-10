@@ -1523,6 +1523,16 @@ footer #footer-mobile{
     float:left;
     width:25%;
   }
+  #modal-content{
+    max-width:1000px;
+  }
+  #modal-close-btn-wrap {
+    padding-right: 0;
+    width: 80%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .modal-career-content{
     width:100%;
     max-width:900px;
@@ -1684,6 +1694,7 @@ footer #footer-mobile{
   .value-img .first{
     /* padding-top:20px; */
     max-height:530px;
+    width:auto;
   }
   .value-four-image img {
     margin-top: 20px;
@@ -1691,5 +1702,8 @@ footer #footer-mobile{
   }
   .modal-career-content{
     max-width:1000px;
+  }
+  .modal-career-content{
+    padding-top:5%
   }
 }
