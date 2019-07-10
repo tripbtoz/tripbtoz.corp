@@ -166,6 +166,7 @@ $(window).ready(function () {
     // navigationTooltips: ['firstSlide', 'secondSlide'],
     showActiveTooltip: true,
     slidesNavigation: true,
+    normalScrollElements: '#modal-vision-content',
     // slidesNavigation: false,
     // slidesNavPosition: 'bottom',
   
@@ -299,11 +300,16 @@ $(window).ready(function () {
     window.myFullpage.setAllowScrolling(false);
     window.myFullpage.setKeyboardScrolling(false);
   })
-  $('#modal-close-btn').click(function () {
+  $('#modal-close-btn, #modal').click(function () {
     // $('body').css({'overflow': 'auto'})
     $("#modal").removeClass('show')
     window.myFullpage.setAllowScrolling(true);
     window.myFullpage.setKeyboardScrolling(true);
+  })
+  $('#modal-content').click(function (evt) {
+    evt.preventDefault()
+    evt.stopPropagation()
+    return false
   })
   $('.modal-value-button').click(function () {
     var button = $(this)
