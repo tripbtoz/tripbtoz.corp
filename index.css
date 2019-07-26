@@ -1489,6 +1489,7 @@ footer #footer-mobile{
     display:block;
     
   }
+  
   .picture-title{
     padding-top:30px;
   }
@@ -1712,6 +1713,16 @@ footer #footer-mobile{
     background:transparent;
     /* margin-top: -260px; */
   }
+  @media screen and (min-height: 1000px) {
+    #hotel-service #hotel-service-top{
+      top:200px;
+    }
+  }
+  @media screen and (min-height:1150px) {
+    #hotel-service-picture {
+      width: 1200px;
+    }
+  }
   #hotel-service .title{
     font-size: 48.5px;
     padding-top:50px;
@@ -1800,5 +1811,18 @@ footer #footer-mobile{
   }
   .modal-career-content{
     padding-top:5%
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  @media screen and (min-height:1100px) {
+    #hotel-service-picture{
+      width:1400px;
+      left: 50%;
+      margin-left: -700px;
+    }
+    .picture img{
+      max-width: auto;
+    }
   }
 }
