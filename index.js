@@ -296,6 +296,13 @@ $(window).ready(function () {
     $('#modal-close-btn-wrap').show()
     $("#"+target).show();
     $("#modal").addClass('show')
+    if (width >= 1024) {
+      if (target === 'modal-path') {
+        $('#modal-content').css({
+          height: 'auto',
+        })
+      }
+    }
     // $('body').css({'overflow': 'hidden'})
     window.myFullpage.setAllowScrolling(false);
     window.myFullpage.setKeyboardScrolling(false);
@@ -305,6 +312,11 @@ $(window).ready(function () {
     $("#modal").removeClass('show')
     window.myFullpage.setAllowScrolling(true);
     window.myFullpage.setKeyboardScrolling(true);
+    if (width >= 1024) {
+      $('#modal-content').css({
+        height: 520,
+      })
+    }
   })
   $('#modal-content').click(function (evt) {
     evt.preventDefault()
