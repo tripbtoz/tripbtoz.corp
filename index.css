@@ -79,6 +79,20 @@ body{
   margin:0;
   font-family: 'NanumSquareOTFR';
 }
+#loading-icon{
+  fill: grey;
+  transition: all 2s;
+  animation:glow 2s ease-in-out;
+}
+#loading-icon.active{
+  fill: #E11282
+}
+@keyframes glow{
+
+  0%{fill:grey;}
+  100%{fill:#E11282}	
+
+}
 .tablet-section{
   display:none;
 }
