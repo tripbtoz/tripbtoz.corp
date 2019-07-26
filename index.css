@@ -1494,7 +1494,7 @@ footer #footer-mobile{
     padding-top:30px;
   }
   .picture-sub-title{
-    font-family: NanumSquareOTFB;
+    font-family: NanumSquareOTFR;
     padding-right:0;
     font-size:15px;
     letter-spacing:-0.7px;
@@ -1622,7 +1622,7 @@ footer #footer-mobile{
     width:100%;
   }
   #contact .section-content-position1{
-    padding-bottom:100px;
+    padding-bottom:150px;
   }
   footer{
     
@@ -1633,11 +1633,15 @@ footer #footer-mobile{
     background-color:white;
     font-size:12px;
     /* padding-top:12px; */
-    padding-bottom:12px;
+    padding-bottom:20px;
   }
   footer #footer-tab-pc{
     width:900px;
     font-size:12px
+  }
+  .footer-item{
+    padding-left:15px;
+    margin-left:10px;
   }
   .icon-list{
     width:900px;
@@ -1806,6 +1810,10 @@ footer #footer-mobile{
     margin-top: 20px;
     max-width: 260px;
   }
+  footer{
+    /* padding-top:12px; */
+    padding-bottom:70px;
+  }
   .modal-career-content{
     max-width:1000px;
   }
@@ -1815,6 +1823,11 @@ footer #footer-mobile{
 }
 
 @media screen and (min-width: 1600px) {
+  @media screen and (max-height:900px) {
+    #hotel-service .title{
+      padding-top:0;
+    }
+  }
   @media screen and (min-height:1100px) {
     #hotel-service-picture{
       width:1500px;
