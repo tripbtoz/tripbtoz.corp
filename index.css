@@ -1641,12 +1641,14 @@ footer #footer-mobile{
   .icon-list{
     width:900px;
   }
-
+  #join{
+    overflow:hidden;
+  }
   #join-bottom-image{
     width: 100%;
     height: auto;
     position: absolute;
-    bottom: -85px;
+    bottom: -285px;
     left: 0;
   }
   #contact{
