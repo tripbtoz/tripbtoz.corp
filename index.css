@@ -358,7 +358,7 @@ aside.active{
 }
 @media screen and (min-width: 400px) {
   #mobile-hotel-service-img img{
-    width: 70%
+    width: 60%
   
   }
   /* .picture-title-wrap{
@@ -585,6 +585,16 @@ aside.active{
   bottom:0;
   left:0;
   z-index:0;
+}
+#join-image-upperground{
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  background-color:rgba(255,255,255,0.5);
+  z-index:1;
+
 }
 #join-title{
   color:black;
@@ -1064,7 +1074,9 @@ footer #footer-mobile{
   line-height:48px;
   vertical-align: middle
 }
-
+#join-button{
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.18);
+}
 .triangle{
   margin-top:7px;
   margin-left: 70px;
@@ -1688,8 +1700,39 @@ footer #footer-mobile{
     float:right;
     width: auto;
   }
+  @media screen and (max-height: 800px) {
+    #hotel-service .title{
+      font-size: 36px !important;
+    }
+    #hotel-service .content{
+      font-size:24px !important;
+    }
+    #hotel-service-picture{
+      width: 760px !important;
+      margin-left: -380px !important;
+    }
+    .picture-sub-title{
+      font-size: 15px !important;
+    }
+  }
 }
 @media screen and (min-width:1200px){
+  @media screen and (max-height: 800px) {
+    #hotel-service .title{
+      padding-top: 25px !important;
+      font-size: 36px !important;
+    }
+    #hotel-service .content{
+      font-size:24px !important;
+    }
+    #hotel-service-picture{
+      width: 760px !important;
+      margin-left: -380px !important;
+    }
+    .picture-sub-title{
+      font-size: 15px !important;
+    }
+  }
   #header-container{
     width:1100px;
   }
